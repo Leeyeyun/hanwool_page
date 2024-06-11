@@ -6,6 +6,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한울 모랑모랑</title>
+    <!-- 웹글꼴 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Shrikhand&display=swap" rel="stylesheet">
+    <!-- CSS/JS 연결 -->
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/responsive.css">
@@ -51,10 +56,10 @@
             </ul>
         </nav>
         <div class="lnb">
+            <a href="#" class="rectangle"></a>
             <div class="lnb_bg"></div><!-- 사이드 열릴 때 왼쪽 배경 -->
             <!-- desktop side nav -->
             <div class="all_nav">
-                <a href="#" class="rectangle"></a>
                 <ul>
                     <li><a href="#">한울소개</a></li>
                     <li><a href="#">제품소개</a></li>
@@ -84,20 +89,23 @@
     <main>
         <div class="present">
             <h1 class="main_title main1">Nature is<br>Present for you!</h1>
-            <div class="left">
-                <p><img src="./images/left_img.jpg" alt=""></p>
-                <p>
-                소중한 당신에게 자연을 선물합니다.<br>
-                한울은 믿을 수 있는, 안전하고 맛있는 간식으로<br>
-                매일매일 맛있는 감동을 전합니다.<br>
-                </p>
-            </div>
-            <div class="swiper top-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slide1"></div>
-                    <div class="swiper-slide slide2"></div>
-                    <div class="swiper-slide slide3"></div>
-                    <div class="swiper-slide slide4"></div>
+            <div class="present_img">
+                <div class="left">
+                    <p><img src="./images/left_img.jpg" alt=""></p>
+                    <p class="sub_txt">
+                    소중한 당신에게 자연을 선물합니다.<br>
+                    한울은 믿을 수 있는, 안전하고 맛있는 간식으로<br>
+                    매일매일 맛있는 감동을 전합니다.<br>
+                    </p>
+                </div>
+                <div class="swiper top-container">
+                    <div class="swiper-wrapper slide-wrap">
+                        <div class="swiper-slide slide1"><img src="./images/main_banner01.jpg" alt=""></div>
+                        <div class="swiper-slide slide2"><img src="./images/main_banner02.jpg" alt=""></div>
+                        <div class="swiper-slide slide3"><img src="./images/main_banner03.jpg" alt=""></div>
+                        <div class="swiper-slide slide4"><img src="./images/main_banner04.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
             <div class="scroll_arrow">
@@ -107,130 +115,142 @@
         </div>
         <!-- e:present -->
         <div class="brand">
-            <div class="brand_title">
-                <h1 class="main_title main2">Brand</h1>
-                <p>
-                자연에서 온 원재료 그대로<br>맛을 포기하지 않고, 안전하고 맛있는 상품으로<br>여러분께 보답합니다.
-                </p>
-            </div>
-            <div class="mall_link">
-                <p>&copy; HANWOOL</p>
-                <a href="#" title="자사몰 바로가기"><img src="./images/brand_img_1.jpg" alt=""></a>
-                <p>
-                We Always Produce Safe<br>and Delicious Products<br>from the Customer's Point of View.
-                </p>
-                <p class="brand_img_left"><img src="./images/brand_img_2.jpg" alt=""></p>
-                <div class="dash_arrow">
-                    <img src="./images/dash_arrow.svg" alt="">
-                    <span>자사몰 바로가기</span>
+            <div class="bg bg2">
+                <div class="brand_title">
+                    <h1 class="main_title main2">Brand</h1>
+                    <p class="sub_txt">
+                        자연에서 온 원재료 그대로<br>맛을 포기하지 않고, 안전하고 맛있는 상품으로<br>여러분께 보답합니다.
+                    </p>
                 </div>
-            </div>
-            <div class="store_link">
-                <div class="dash_arrow">
-                    <img src="./images/dash_arrow.svg" alt=""><!-- css 오른쪽 반전 시키기 -->
-                    <span>스토어 바로가기</span>
+                <div class="mall_link">
+                    <p>&copy; HANWOOL</p>
+                    <a href="#" title="자사몰 바로가기"><img src="./images/brand_img_2.jpg" alt=""></a>
+                    <p>
+                        We Always Produce Safe<br>and Delicious Products<br>from the Customer's Point of View.
+                    </p>
+                    <div class="dash_arrow">
+                        <img src="./images/dash_arrow.svg" alt="">
+                        <span>자사몰<br>바로가기</span>
+                    </div>
                 </div>
-                <a href="#" title="스토어 바로가기"><img src="./images/brand_img_3.jpg" alt=""></a>
+                <p class="brand_img_left"><img src="./images/brand_img_1.jpg" alt=""></p>
+                <div class="store_link">
+                    <div class="dash_arrow">
+                        <img src="./images/dash_arrow.svg" alt=""><!-- css 오른쪽 반전 시키기 -->
+                        <span>스토어<br>바로가기</span>
+                    </div>
+                    <a href="#" title="스토어 바로가기"><img src="./images/brand_img_3.jpg" alt=""></a>
+                </div>
             </div>
         </div>
         <!-- e:brand -->
         <div class="product">
-            <div class="product_title">
-                <h1 class="main_title main3">Product</h1>
-                <p>
-                차별화된 기술력과 노하우로<br>다양한 자연의 색과 맛을 표현합니다.
-                </p>
-            </div>
-            <div class="swiper product-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide product1">
-                        <a href="#" title="상품보러가기">
-                            <p><img src="./images/product_001.png" alt=""></p>
-                            <div class="txt">
-                                <h2>샌드스틱</h2>
-                                <h3>Sand Stick</h3>
-                                <p>다양한 채소를 믹스 앤 매치하여 즐기는 새로운 맛</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide product2">
-                        <a href="#" title="상품보러가기">
-                            <p><img src="./images/product_002.png" alt=""></p>
-                            <div class="txt">
-                                <h2>스틱</h2>
-                                <h3>Stick</h3>
-                                <p>국내 최초 제조공법 특허</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide product3">
-                        <a href="#" title="상품보러가기">
-                            <p><img src="./images/product_003.png" alt=""></p>
-                            <div class="txt">
-                                <h2>말랭이</h2>
-                                <h3>Sand Stick</h3>
-                                <p>차별화된 촉촉함과 쫀득함</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide product4">
-                        <a href="#" title="상품보러가기">
-                            <p><img src="./images/product_004.png" alt=""></p>
-                            <div class="txt">
-                                <h2>RTE</h2>
-                                <h3>Ready to Eat</h3>
-                                <p>조리 없이 바로 먹는 간편 먹거리</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide product5">
-                        <a href="#" title="상품보러가기">
-                            <p><img src="./images/product_005.png" alt=""></p>
-                            <div class="txt">
-                                <h2>잼</h2>
-                                <h3>Jam</h3>
-                                <p>홈메이드 방식의 프리미엄 수제잼</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide product6">
-                        <a href="#" title="상품보러가기">
-                            <p><img src="./images/product_006.png" alt=""></p>
-                            <div class="txt">
-                                <h2>농산물</h2>
-                                <h3>Vegetable/Fruit</h3>
-                                <p>계약재배와 콜드체인 시스템으로 신선도 유지</p>
-                            </div>
-                        </a>
+            <div class="top">
+                <div class="product_title">
+                    <h1 class="main_title main3">Product</h1>
+                    <p class="sub_txt">
+                        차별화된 기술력과 노하우로<br>다양한 자연의 색과 맛을 표현합니다.
+                    </p>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper product-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide product1">
+                            <a href="#" title="상품보러가기">
+                                <p><img src="./images/product_001.png" alt=""></p>
+                                <div class="txt">
+                                    <h2>샌드스틱</h2>
+                                    <h3>Sand Stick</h3>
+                                    <p>다양한 채소를 믹스 앤 매치하여 즐기는 새로운 맛</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide product2">
+                            <a href="#" title="상품보러가기">
+                                <p><img src="./images/product_002.png" alt=""></p>
+                                <div class="txt">
+                                    <h2>스틱</h2>
+                                    <h3>Stick</h3>
+                                    <p>국내 최초 제조공법 특허</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide product3">
+                            <a href="#" title="상품보러가기">
+                                <p><img src="./images/product_003.png" alt=""></p>
+                                <div class="txt">
+                                    <h2>말랭이</h2>
+                                    <h3>Sand Stick</h3>
+                                    <p>차별화된 촉촉함과 쫀득함</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide product4">
+                            <a href="#" title="상품보러가기">
+                                <p><img src="./images/product_004.png" alt=""></p>
+                                <div class="txt">
+                                    <h2>RTE</h2>
+                                    <h3>Ready to Eat</h3>
+                                    <p>조리 없이 바로 먹는 간편 먹거리</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide product5">
+                            <a href="#" title="상품보러가기">
+                                <p><img src="./images/product_005.png" alt=""></p>
+                                <div class="txt">
+                                    <h2>잼</h2>
+                                    <h3>Jam</h3>
+                                    <p>홈메이드 방식의 프리미엄 수제잼</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide product6">
+                            <a href="#" title="상품보러가기">
+                                <p><img src="./images/product_006.png" alt=""></p>
+                                <div class="txt">
+                                    <h2>농산물</h2>
+                                    <h3>Vegetable/Fruit</h3>
+                                    <p>계약재배와 콜드체인 시스템으로 신선도 유지</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+            </div>
+            <div class="line_wrap">
+                <div class="line line1"></div>
+                <div class="line line2"></div>
+                <div class="line line3"></div>
+                <div class="line line4"></div>
             </div>
             <!-- e:brand-swiper -->
-            <div class="sub_title sub_left">
-                <h2>Always MORANG MORANG!</h2>
-                <P>
-                상담 가능 시간 : 9:00~18:00<br>주말, 공휴일 휴무 / 053-214-5000
-                </P>
-                <a href="#" title="상담 하러 가기">Directions</a>
-            </div>
-            <div class="sub_title sub_right">
-                <h2>Story of Nature</h2>
-                <div class="swiper qna-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide qna1">
-                            <p><em>Q</em>자연의 이야기 : 7화, 밀양 금왕감자</p>
-                            <p><em>A</em>안녕하세요~ 한울지기입니다! 여러분, 혹시...감자... 좋아하세요?(한울지기는 사실...)</p>
-                        </div>
-                        <div class="swiper-slide qna2">
-                            <p><em>Q</em>자연의 이야기 : 6화, 강원 아라리찰</p>
-                            <p><em>A</em>랑하~ 한울지기입니다! 오늘은 맛있는 옥수수를 들고 왔어요! 과연 이번에는 한울팀이 어디를...</p>
-                        </div>
-                        <div class="swiper-slide qna3">
-                            <p><em>Q</em>자연의 이야기 : 5화, 경산 육동 미나리</p>
-                            <p><em>A</em>(*해당 게시글은 2022.02 백업 게시글입니다.) 육동 미나리는 내년 겨울을 기다려 주...</p>
+            <div class="btm">
+                <div class="sub_title sub_left">
+                    <h2>Always MORANG MORANG!</h2>
+                    <P>
+                    상담 가능 시간 : 9:00~18:00<br>주말, 공휴일 휴무 / 053-214-5000
+                    </P>
+                    <a href="#" title="상담 하러 가기">Directions</a>
+                </div>
+                <div class="sub_title sub_right">
+                    <h2>Story of Nature</h2>
+                    <div class="swiper qna-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide qna1">
+                                <p><em>Q</em>자연의 이야기 : 7화, 밀양 금왕감자</p>
+                                <p><em>A</em>안녕하세요~ 한울지기입니다! 여러분, 혹시...감자... 좋아하세요?(한울지기는 사실...)</p>
+                            </div>
+                            <div class="swiper-slide qna2">
+                                <p><em>Q</em>자연의 이야기 : 6화, 강원 아라리찰</p>
+                                <p><em>A</em>랑하~ 한울지기입니다! 오늘은 맛있는 옥수수를 들고 왔어요! 과연 이번에는 한울팀이 어디를...</p>
+                            </div>
+                            <div class="swiper-slide qna3">
+                                <p><em>Q</em>자연의 이야기 : 5화, 경산 육동 미나리</p>
+                                <p><em>A</em>(*해당 게시글은 2022.02 백업 게시글입니다.) 육동 미나리는 내년 겨울을 기다려 주...</p>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -238,23 +258,29 @@
             </div>
         </div>
         <!-- e:product -->
-        <div class="tripple_link">
-            <a href="#">
-                <img src="./images/img1_off.png" alt="">
-                <span>PRODUCT</span>
-                <img src="./images/big_arrow.svg" alt="">
-            </a>
-            <a href="#">
-                <img src="./images/img2_off.png" alt="">
-                <span>INQUIRY</span>
-                <img src="./images/big_arrow.svg" alt="">
-            </a>
-            <a href="#">
-                <img src="./images/img3_off.png" alt="">
-                <span>NOTICE BOARD</span>
-                <img src="./images/big_arrow.svg" alt="">
-            </a>
-        </div>
+        <ul class="tripple_wrap">
+            <li class="tripple_contents">
+                <a href="#">
+                    <img src="./images/tripple_1.png" alt="">
+                    <span>PRODUCT</span>
+                    <img src="./images/big_arrow.svg" alt="">
+                </a>
+            </li>
+            <li class="tripple_contents">
+                <a href="#">
+                    <img src="./images/tripple_2.png" alt="">
+                    <span>INQUIRY</span>
+                    <img src="./images/big_arrow.svg" alt="">
+                </a>
+            </li>
+            <li class="tripple_contents">
+                <a href="#">
+                    <img src="./images/tripple_3.png" alt="">
+                    <span>NOTICE BOARD</span>
+                    <img src="./images/big_arrow.svg" alt="">
+                </a>
+            </li>
+        </ul>
         <!-- e:tripple_link -->
         <div class="ask">
             <a href="#">
@@ -265,13 +291,16 @@
         <!-- e:ask -->
     </main>
     <footer>
-        <div class="left">
+        <div class="top">
+            <div class="m_call">
+                <button type="button" class="call">053-214-5000</button>
+                <button type="button" class="call"><img src="./images/call.svg" alt=""></button>
+            </div>
             <section>
                 <h3>한울 농업회사법인주식회사</h3>
                 <p>
                     대표자 : 박규섭<br>사업자번호 : 398-86-02326<br>전화번호 : 053-214-5000<br>주소 : 경상북도 영천시 청통면 관방길 153-20<br>E-mail : hanwool5000@hanmail.net
                 </p>
-                <p>&copy; Copyright HANWOOL.</p>
             </section>
             <section>
                 <h3>한울푸드</h3>
@@ -279,9 +308,10 @@
                     대표자 : 박규섭, 최윤지<br>사업자번호 : 502-31-44401<br>전화번호 : 053-214-5000<br>주소 : 경상북도 영천시 청통면 월성길 7-3<br>E-mail : hanwool5000@hanmail.net
                 </p>
             </section>
-        </div>
-        <div class="right">
             <a href="#"><img src="./images/logo_ft.png" alt="한울 기업"></a>
+        </div>
+        <div class="btm">
+            <p>&copy; Copyright HANWOOL.</p>
             <div class="link">
                 <a href="#">Admin</a>
                 <a href="#">Smart Store</a>

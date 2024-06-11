@@ -1,0 +1,16 @@
+@media screen and (max-width:1626px){
+    /* 데스크탑 메뉴 숨기기 */
+    header, main > * {width:100%;}
+}
+@media screen and (max-width:1060px){
+    header {padding:32px 18px; align-items:center;}
+    header > nav {display:none;}
+    /* 데스크탑 사이드 메뉴 숨기기 */
+    header .lnb .rectangle {display:none;}
+    /* 모바일 사이드 메뉴(햄버거 스타일) 보이기 */
+    header .lnb .m_nav .all_nav {display:block;}
+    header h1 a img {width:150px;}
+}
+@media screen and (max-width:480px){
+    header h1 a img {width:120px;}
+}
