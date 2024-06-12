@@ -52,11 +52,8 @@ header .top_wrap .lnb > .all_nav {display:none;}
 header .top_wrap .lnb .m_nav {display:none;}
 header .top_wrap .lnb .m_nav .all_nav {position:absolute; right:18px; top:45px;}
 header .top_wrap .lnb .m_nav .all_nav img {}
+
 /* ============================== main 시작 ============================== */
-main > * {
-    /* margin:0 auto;
-    width:1626px; padding:0 18px; */
-}
 main {margin:0 auto;}
 /* main 공통 적용 */
 main .main_title {font-family: "Shrikhand", serif; font-size:3.75rem; color:#013630;}
@@ -68,23 +65,27 @@ main .present .wrapper {
     max-width:1590px; margin:0 auto; position:relative;
 }
 main .present .wrapper .main1 {font-size:3.375rem; line-height:1.1; margin-bottom:28px;}
-main .present .wrapper .present_img {
-    height:100%;
-    display:flex; justify-content:space-between;
-}
+
 /* (main)-present 왼쪽 이미지+스크롤화살표 */
 main .present .wrapper .present_img .left {width:35%; height:100%;}
-main .present .wrapper .present_img .left > p img {width:100%;}
+main .present .wrapper .present_img .left > p > img {width:100%;}
 main .present .wrapper .present_img .left .scroll_arrow {margin-bottom:125px;}
 main .present .wrapper .present_img .left .scroll_arrow p:first-child {
     font-size:0.75rem; font-weight:700; margin-bottom:18px;
 }
-main .present .wrapper .present_img .left .scsroll_arrow > p img {width:24px;}
+main .present .wrapper .present_img .left .scsroll_arrow > p > img {width:24px;}
 /* (main)-present 오른쪽 카드swipe */
-main .present .wrapper .present_img .top-container {width:60%; overflow:hidden;}
-main .present .wrapper .present_img .top-container .swiper-wrapper {display:flex;}
-main .present .wrapper .present_img .top-container .swiper-wrapper .swiper-slide {}
-main .present .wrapper .present_img .top-container .swiper-wrapper .swiper-slide img {height:100%;}
+main .present .wrapper .present_img {
+    width:100%;
+    display:flex; justify-content:space-between;
+}
+main .present .wrapper .present_img .top-container {width:62%; overflow:hidden; height:auto;}
+main .present .wrapper .present_img .top-container .swiper-wrapper {display:flex; justify-content:flex-start; align-items:center;}
+main .present .wrapper .present_img .top-container > .swiper-wrapper > .swiper-slide {
+    display:flex; justify-content:center; align-items:center;
+}
+main .present .wrapper .present_img .top-container .swiper-wrapper .slide1 > img {width:100%; height:auto;}
+
 /* ------------------- (main)2. brand ------------------- */
 main .brand {
     padding:100px 0;
