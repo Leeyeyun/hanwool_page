@@ -1,6 +1,7 @@
 @media screen and (max-width:1626px){
     /* 데스크탑 메뉴 숨기기 */
     header, main > * {width:100%;}
+    main .present .wrapper {padding:90px 18px 0;}
 }
 @media screen and (max-width:1060px){
     header {padding:32px 18px; align-items:center;}

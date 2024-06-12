@@ -55,30 +55,37 @@ main > * {
     /* margin:0 auto;
     width:1626px; padding:0 18px; */
 }
-main {}
-main .main_title {
-    font-family: "Shrikhand", serif; font-size:3.75rem; color:#013630;
-}
+main {margin:0 auto;}
+/* main 공통 적용 */
+main .main_title {font-family: "Shrikhand", serif; font-size:3.75rem; color:#013630;}
 main .sub_txt {font-size:1.313rem; letter-spacing:-0.2px; line-height:1.5; margin-top:24px;}
 /* ------------------- (main)1. present ------------------- */
-main .present {
+/* main .present {
     margin:0 auto;
     width:1626px; padding:0 18px;
 }
 main .present .main1 {font-size:3.375rem; line-height:1.1; margin:90px 0 28px;}
 main .present .present_img {display:flex; align-items:flex-start;}
 main .present .present_img .left {display:flex; flex-flow:column nowrap; align-items:flex-start;}
-main .present .present_img .left > p > img {width:100%; margin-right:46px;}
+main .present .present_img .left > p > img {width:100%; margin-right:46px;} */
+main .present {width:100%;}
+main .present .wrapper {
+    padding-top:90px; height:auto;
+    max-width:1590px; margin:0 auto; position:relative;
+}
+main .present .wrapper .main1 {font-size:3.375rem; line-height:1.1; margin-bottom:28px;}
+main .present .wrapper .present_img {
+    height:100%;
+    display:flex; justify-content:space-between;
+}
+main .present .wrapper .present_img .left {width:35%; height:100%;}
+main .present .wrapper .present_img .left p img {width:100%;}
 /* main-present-카드swipe */
-main .present .top-container {}
-main .present .top-container .slide-wrap {height:460px; overflow:hidden;}
-main .present .top-container > .swiper-wrapper {}
-main .present .top-container > .swiper-wrapper .swiper-slide {}
-main .present .top-container > .swiper-wrapper .swiper-slide img {height:100%;}
-main .present .top-container > .swiper-wrapper .slide1 {}
-main .present .top-container > .swiper-wrapper .slide2 {}
-main .present .top-container > .swiper-wrapper .slide3 {}
-main .present .top-container > .swiper-wrapper .slide4 {}
+main .present .wrapper .present_img .top-container {width:60%; overflow:hidden;}
+main .present .wrapper .present_img .top-container .swiper-wrapper {display:flex;}
+main .present .wrapper .present_img .top-container .swiper-wrapper .swiper-slide {}
+main .present .wrapper .present_img .top-container .swiper-wrapper .swiper-slide img {height:100%;}
+
 /* e:main-present-카드swipe */
 main .present .scroll_arrow {margin-bottom:125px;}
 main .present .scroll_arrow p:first-child {font-size:0.75rem; font-weight:700; margin-bottom:18px;}
