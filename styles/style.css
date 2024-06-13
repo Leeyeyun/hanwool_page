@@ -16,7 +16,7 @@ header .top_wrap nav .gnb {display:flex; justify-content:center;}
 header .top_wrap nav .gnb > li {width:144px; margin-right:8px; position:relative;}
 header .top_wrap nav .gnb > li:last-child {margin-right:0;}
 header .top_wrap nav .gnb > li > a {
-    font-size:1.375rem; padding:16px 0; display:inline-block;
+    font-size:1.375rem; padding:16px 0; font-weight:500; display:inline-block;
 }
 header.top_wrap  nav .gnb > li:last-child a {}
 /* header-nav-sub(초기값 숨기기) */
@@ -98,7 +98,7 @@ main .brand > p {
     overflow:hidden;
 }
 main .brand > .wrapper {
-    max-width:1590px; margin:0 auto; position:relative; /* border:2px solid red; */
+    max-width:1590px; margin:0 auto; position:relative;
     display:flex; justify-content:space-between; height:100%;
 }
 /* (main)-brand wrapper2 mall_link */
@@ -110,11 +110,11 @@ main .brand > .wrapper .mall_link > p {font-weight:500; line-height:1.5; color:#
 main .brand > .wrapper .mall_link > p:first-child {text-align:left; transform:translateX(230px);}
 main .brand > .wrapper .mall_link > a {}
 main .brand > .wrapper .mall_link > a > img {border:18px solid #013630;}
-main .brand > .wrapper .mall_link .dash_arrow {
+main .brand > .wrapper .mall_link > .dash_arrow {
     position:absolute; text-align:center;
     right:-130px; bottom:100px; text-wrap:nowrap;
 }
-main .brand > .wrapper .mall_link .dash_arrow img {
+main .brand > .wrapper .mall_link > .dash_arrow > img {
     position:absolute; right:40px; top:-100px;
 }
 main .brand > .wrapper .dash_arrow span {color:#fff; font-size:1.25rem; line-height:1.5; letter-spacing:-0.2px;}
@@ -187,7 +187,7 @@ main .product .btm .sub_right .qna-container .swiper-wrapper {}
 main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide {}
 main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide p {font-size:1.313rem; letter-spacing:-0.2px; line-height:1.7;}
 main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide p em {font-weight:500;}
-main .product .btm .sub_right .swiper-pagination {background-color:yellow; width:10px; height:10px;}
+main .product .btm .sub_right .swiper-pagination {width:10px; height:10px;}
 /* ------------------- (main)4. overlap ------------------- */
 main .overlap_wrap {display:flex; flex-flow:column nowrap;}
 main .overlap_wrap .overlap_contents {margin-top:-140px;}
@@ -203,8 +203,9 @@ main .overlap_wrap .overlap_contents .ask {
     text-align:center;
 }
 main .overlap_wrap .overlap_contents .ask a {display:flex; justify-content:center; align-items:center; height:100%;}
+main .overlap_wrap .overlap_contents .ask a br {display:none;}
 main .overlap_wrap .overlap_contents .ask a h3 {
-    font-size:5.75rem; font-weight:700; color:#fff; letter-spacing:0.2px;
+    font-size:5.75rem; font-weight:700; color:#fff; letter-spacing:0.2px; line-height:1.2;
 }
 main .overlap_wrap .overlap_contents .ask a p {font-size:1.25rem; letter-spacing:-0.2px; color:#fff; transform:translateY(-20px);}
 /* ============================== footer 시작 ============================== */
