@@ -103,19 +103,22 @@ main .brand > .wrapper {
 }
 /* (main)-brand wrapper2 mall_link */
 main .brand > .wrapper .mall_link {
-    z-index:5; width:50%; text-align:right;
+    z-index:5; width:50%;
     position:relative;
 }
-main .brand > .wrapper .mall_link > p {font-weight:500; line-height:1.5; color:#fff; padding-right:25px;}
-main .brand > .wrapper .mall_link > p:first-child {text-align:left; transform:translateX(230px);}
-main .brand > .wrapper .mall_link > a {}
-main .brand > .wrapper .mall_link > a > img {border:18px solid #013630;}
+main .brand > .wrapper .mall_link .mall_link_txt {width:100%; text-align:right;}
+main .brand > .wrapper .mall_link .mall_link_txt p {font-weight:500; line-height:1.5; color:#fff; padding-right:25px;}
+main .brand > .wrapper .mall_link .mall_link_txt p:first-child {text-align:left; transform:translateX(230px);}
+main .brand > .wrapper .mall_link .mall_link_txt a {}
+main .brand > .wrapper .mall_link .mall_link_txt a > img {border:18px solid #013630;}
 main .brand > .wrapper .mall_link > .dash_arrow {
     position:absolute; text-align:center;
-    right:-130px; bottom:100px; text-wrap:nowrap;
+    left:calc(100% + 45px); bottom:100px; text-wrap:nowrap;
 }
-main .brand > .wrapper .mall_link > .dash_arrow > img {
-    position:absolute; right:40px; top:-100px;
+main .brand > .wrapper .mall_link > .dash_arrow::before {
+    content:''; display:inline-block; background-repeat:no-repeat;
+    width:86px; height:86px; position:absolute; right:30px; bottom:70px;
+    background-image:url(../images/dash_arrow.svg);
 }
 main .brand > .wrapper .dash_arrow span {color:#fff; font-size:1.25rem; line-height:1.5; letter-spacing:-0.2px;}
 /* (main)-brand wrapper2 */
@@ -136,8 +139,10 @@ main .brand > .wrapper .title_store_link .store_link {
 main .brand > .wrapper .title_store_link .store_link .dash_arrow {
     position:absolute; left:-150px; bottom:0; text-align:center;
 }
-main .brand > .wrapper .title_store_link .store_link .dash_arrow img {
-    transform:scaleX(-1); position:absolute; right:-50px; top:-100px;
+main .brand > .wrapper .title_store_link .store_link .dash_arrow::before {
+    content:''; display:inline-block; background-repeat:no-repeat;
+    width:86px; height:86px; position:absolute; right:-50px; bottom:70px;
+    background-image:url(../images/dash_arrow_right.svg);
 }
 /* ------------------- (main)3. product ------------------- */
 main .product {position:relative;}
