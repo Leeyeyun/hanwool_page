@@ -61,35 +61,35 @@ main .sub_txt {font-size:1.313rem; letter-spacing:-0.2px; line-height:1.5; margi
 /* ------------------- (main)1. present ------------------- */
 main .present {width:100%;}
 main .present .wrapper {
-    padding-top:90px; height:auto;
-    max-width:1590px; margin:0 auto; position:relative;
+    padding:90px 0; margin:0 auto;
+    max-width:1590px; position:relative;
 }
 main .present .wrapper .main1 {font-size:3.375rem; line-height:1.1; margin-bottom:28px;}
 
 /* (main)-present 왼쪽 이미지+스크롤화살표 */
-main .present .wrapper .present_img .left {width:35%; height:100%;}
+main .present .wrapper .present_img {
+    width:100%;
+    display:flex; justify-content:space-between;
+}
+main .present .wrapper .present_img .left {width:60%; margin-right:46px;}
 main .present .wrapper .present_img .left > p > img {width:100%;}
-main .present .wrapper .present_img .left .scroll_arrow {margin-bottom:125px;}
+main .present .wrapper .present_img .left .scroll_arrow {}
 main .present .wrapper .present_img .left .scroll_arrow p:first-child {
     font-size:0.75rem; font-weight:700; margin-bottom:18px;
 }
 main .present .wrapper .present_img .left .scsroll_arrow > p > img {width:24px;}
 /* (main)-present 오른쪽 카드swipe */
-main .present .wrapper .present_img {
-    width:100%;
-    display:flex; justify-content:space-between;
+main .present .wrapper .present_img .top-container {width:100%;}
+main .present .wrapper .present_img .top-container .swiper-wrapper {}
+main .present .wrapper .present_img .top-container > .swiper-wrapper > .swiper-slide {}
+main .present .wrapper .present_img .top-container .swiper-wrapper .swiper-slide > img {width:100%; height:auto;}
+.top-container .swiper-pagination {
+    text-align:right; bottom:40px;
 }
-main .present .wrapper .present_img .top-container {width:62%; overflow:hidden; height:auto;}
-main .present .wrapper .present_img .top-container .swiper-wrapper {display:flex; justify-content:flex-start; align-items:center;}
-main .present .wrapper .present_img .top-container > .swiper-wrapper > .swiper-slide {
-    display:flex; justify-content:center; align-items:center;
-}
-main .present .wrapper .present_img .top-container .swiper-wrapper .slide1 > img {width:100%; height:auto;}
-
 /* ------------------- (main)2. brand ------------------- */
 main .brand {
     padding:100px 0;
-    height:808px; background-color:#013630; width:100%;
+    height:100%; background-color:#013630; width:100%;
     position:relative; overflow:hidden;
 }
 /* (main)-brand 왼쪽 이미지 */
@@ -128,7 +128,7 @@ main .brand > .wrapper .title_store_link {
 }
 main .brand > .wrapper .title_store_link .brand_title {
     position:absolute; left:0; top:0; z-index:55;
-    margin:55px 0 0 55px;
+    margin:55px 0 0 20px;
 }
 main .brand > .wrapper .title_store_link .brand_title .main2,
 main .brand > .wrapper .title_store_link .brand_title .sub_txt {color:#fff;}
@@ -145,38 +145,76 @@ main .brand > .wrapper .title_store_link .store_link .dash_arrow::before {
     background-image:url(../images/dash_arrow_right.svg);
 }
 /* ------------------- (main)3. product ------------------- */
-main .product {position:relative;}
-main .product .top {display:flex; width:100%; height:100%;}
-main .product .top .product_title {text-align:center; width:25%; display:inline-block; padding-top:296px;}
-/* main-product-카드swipe */
-main .product .top .product-container {width:75%; overflow:hidden; height:100%;}
-main .product .top .product-container .swiper-wrapper {display:flex; width:100%; height:100%;}
-main .product .top .product-container .swiper-wrapper .swiper-slide {
-    padding:116px 36px; width:calc(100% / 3); /* border:5px solid pink; */
+main .product {position:relative; height:100%;}
+main .product .top {display:flex; align-items:center; position:relative;}
+main .product .top .product_title {
+    text-align:center; width:25%; position:relative;
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
 }
-main .product .top .product-container .swiper-wrapper .swiper-slide > a {text-align:left; width:100%; display:inline-block; overflow:hidden;}
-main .product .top .product-container .swiper-wrapper .swiper-slide > a > p {width:100%;}
-main .product .top .product-container .swiper-wrapper .swiper-slide > a > p > img {}
-main .product .top .product-container .swiper-wrapper .swiper-slide a .txt {margin-left:20px;}
+/* 페이지네이션&이전다음버튼 디자인 */
+main .product .top .product_title .product_pagination {
+    height:35px; 
+}
+main .product .top .product_title .product_pagination .swiper-pagination {
+    position:relative; margin-top:-18px;
+}
+main .product .top .product_title .product_pagination .prev_next {
+    position:relative; width:160px; height:35px;
+}
+main .product .top .product_title .product_pagination .prev_next .swiper-button-prev {
+    content:''; display:inline-block;
+    background-image:url(../images/prev_icon.png);
+    width:29px; background-repeat:no-repeat;
+    color:transparent; background-position-y:15px;
+}
+main .product .top .product_title .product_pagination .prev_next .swiper-button-next {
+    content:''; display:inline-block;
+    background-image:url(../images/next_icon.png);
+    width:29px; background-repeat:no-repeat;
+    color:transparent; background-position-y:15px;
+}
+/* main-product-카드swipe */
+main .product .top .product-container {width:75%; overflow:hidden;}
+main .product .top .product-container .swiper-wrapper .swiper-slide {}
+main .product .top .product-container .swiper-wrapper .swiper-slide > a {
+    padding:150px 35px;
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
+}
+main .product .top .product-container .swiper-wrapper .swiper-slide > a > p {}
+main .product .top .product-container .swiper-wrapper .swiper-slide > a > p > img {width:100%;}
+/* product 상품 설명 디자인 */
+main .product .top .product-container .swiper-wrapper .swiper-slide a .txt {
+    margin-top:85px;
+    margin-left:20px; width:100%;
+}
 main .product .top .product-container .swiper-wrapper .swiper-slide a .txt > * {font-weight:500; letter-spacing:-0.2px;}
 main .product .top .product-container .swiper-wrapper .swiper-slide a .txt h2 {font-size:1.313rem;}
 main .product .top .product-container .swiper-wrapper .swiper-slide a .txt h3 {color:#013630; margin:7px 0;}
 main .product .top .product-container .swiper-wrapper .swiper-slide a .txt p {color:#919190; font-weight:400;}
 /* e:main-product-카드swipe */
-main .product .line_wrap {}
+/* line-wrap */
+main .product .line_wrap {
+    width:100%; height:100%;
+    position:absolute; left:0; top:0;
+}
 main .product .line_wrap .line {
-    width:1px; height:calc(100% / 3 * 2); background-color:#000;
-    position:absolute; top:0;
+    width:1px; background-color:#000;
+    position:absolute; height:100%;
 }
 main .product .line_wrap .line1 {left:25%;}
-main .product .line_wrap .line2 {left:50%; height:100%;}
+main .product .line_wrap .line2 {left:50%; z-index:5;}
 main .product .line_wrap .line3 {left:75%;}
-main .product .line_wrap .line4 {height:1px; width:100%; background-color:#000; top:calc(100% / 3 * 2);}
+main .product .line_wrap .line4 {height:1px; width:100%; background-color:#000; z-index:5; bottom:calc((100% / 3) + 49px);}
 /* e:main-product-linewrap */
-main .product .btm {height:405px; display:flex;}
+main .product .btm {
+    display:flex; /* border:2px solid blue; */
+    position:relative; z-index:3;
+    background-color:#F7F5E8;
+    border-top:1px solid #000;
+}
 main .product .btm .sub_title {width:50%;}
 /* btm-left always-morang-morang part */
-main .product .btm .sub_left {padding:102px 0; text-align:center; width:50%;}
+main .product .btm .sub_left {text-align:center; display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;}
 main .product .btm h2 {font-family: "Shrikhand", serif; font-size:2.5rem; text-wrap:nowrap; color:#013630; text-align:center;}
 main .product .btm .sub_left p {font-size:1.125rem; line-height:1.5; letter-spacing:-0.2px; margin:16px 0 26px;}
 main .product .btm .sub_left a {
@@ -185,14 +223,28 @@ main .product .btm .sub_left a {
     width:206px; height:64px; line-height:64px;
 }
 /* btm-right story-of-nature part */
-main .product .btm .sub_right {padding:49px 45px; text-align:left;}
-main .product .btm .sub_right h2 {/* padding:49px 45px; */ text-align:left;}
-main .product .btm .sub_right .qna-container {margin:12px 0 163px; height:72px; overflow:hidden;}
+main .product .btm .sub_right {
+    text-align:left; position:relative;
+    padding:49px 45px;
+}
+main .product .btm .sub_right h2 {text-align:left;}
+main .product .btm .sub_right .qna-container {/* margin:12px 0 163px;  */ overflow:hidden; margin:12px 0 163px;}
 main .product .btm .sub_right .qna-container .swiper-wrapper {}
 main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide {}
 main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide p {font-size:1.313rem; letter-spacing:-0.2px; line-height:1.7;}
-main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide p em {font-weight:500;}
-main .product .btm .sub_right .swiper-pagination {width:10px; height:10px;}
+main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide p em {font-weight:500; margin-right:22px;}
+/* pagination css */
+main .product .btm .sub_right .swiper-pagination {
+    display:flex; position:relative;
+    justify-content:flex-start; align-items:center;
+}
+main .product .btm .sub_right .swiper-pagination .swiper-pagination-bullet {
+    opacity:1; /* 기본값 0.2 */
+    background:#CDCDCD; width:12px; height:12px; margin-right:5px;
+}
+main .product .btm .sub_right .swiper-pagination .swiper-pagination-bullet-active {
+    background:#013630;
+}
 /* ------------------- (main)4. overlap ------------------- */
 main .overlap_wrap {display:flex; flex-flow:column nowrap;}
 main .overlap_wrap .overlap_contents {margin-top:-140px;}
