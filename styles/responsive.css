@@ -45,6 +45,8 @@
     /* 모바일 사이드 메뉴(햄버거 스타일) 보이기 */
     header .top_wrap .lnb .m_nav {display:block;}
     header .top_wrap h1 a img {width:150px;}
+
+    /* main-brand */
     main .brand > .wrapper .title_store_link .store_link {
         position:absolute; right:0; bottom:0;
     }
@@ -54,6 +56,15 @@
     /* main 공통 적용 */
     main .main_title {font-size:2.875rem;}
     main .sub_txt {font-size:1rem;}
+
+    /* main-present */
+    main .present .wrapper .main1 {font-size:2.5rem;}
+    main .present .wrapper .present_img {width:100%;flex-flow:column-reverse;}
+    main .present .wrapper .present_img .left {width:100%;}
+    main .present .wrapper .present_img .left .scroll_arrow {margin-bottom:48px;}
+    main .present .wrapper .present_img .left > p > img {display:none;}
+    main .present .wrapper .present_img .top-container {width:100%; margin-bottom:24px;}
+
     /* (main)4. overlap */
     main .overlap_wrap .overlap_contents {margin-top:0;}
     main .overlap_wrap .overlap_contents > a {height:200px; background-color:#013630;}
