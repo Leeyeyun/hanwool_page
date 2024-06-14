@@ -1,0 +1,48 @@
+main {margin:0 auto; text-align:center; background-color:#F7F5E8;}
+main h1 {font-size:2.5rem; font-weight:700; padding-top:10px;}
+main .category {margin:20px 0 95px ;}
+main .category a {
+    font-size:1.125rem; font-weight:500; letter-spacing:-0.2px; color:#999; line-height:52px; margin-right:50px; display:inline-block;
+}
+main .category > .active {
+    color:#005B4F; border-bottom:4px solid #005B4F;
+}
+main .category a:last-child {margin-right:0;}
+/* -------------- main-wrap-step -------------- */
+main .wrap {
+    background-color:#fff; max-width:1590px; margin:0 auto;
+    border-radius:40px; padding:50px 120px; text-align:center; position:relative;
+}
+main .patent_wrap {padding-bottom:100px;}
+main .wrap .step {text-align:left; display:flex; align-items:center;}
+main .wrap .step a {
+    font-size:0.875rem; font-weight:500; letter-spacing:-0.2px;
+    color:#666;
+}
+main .wrap .step a img {transform:translateY(1px);}
+main .wrap .step a::after {
+    content:''; display:inline-block;
+    background-image:url(../images/arrow_icon.svg);
+    width:10px; height:10px; background-size:cover;
+    rotate:-90deg; filter:opacity(0.7); margin:0 6px;
+}
+main .wrap .step a:last-child::after {display:none;}
+/* ------------- (위)공통 디자인 ------------- */
+/* -------------- main-wrap-notice_contents -------------- */
+main .wrap .notice_contents {margin-top:65px;}
+main .wrap .notice_contents .notice_item {
+    border:1px solid blue; display:flex; padding:21px; justify-content:space-between; margin-bottom:21px;
+    width:100%;
+}
+main .wrap .notice_contents .notice_item:last-child {margin-bottom:0;}
+main .wrap .notice_contents .notice_item > a {margin-right:30px;}
+main .wrap .notice_contents .notice_item > a img {width:100%;}
+main .wrap .notice_contents .notice_item .notice_title {text-align:left; border:1px solid red;}
+main .wrap .notice_contents .notice_item .notice_title > a {
+    font-weight:500; letter-spacing:-0.6px;
+    line-height:57px; margin-bottom:10px; padding-left:16px;
+}
+main .wrap .notice_contents .notice_item .notice_title p {
+    padding:16px 21px; line-height:1.7; background-color:#f6f6f6; color:#666;
+    letter-spacing:-0.6px;
+}
