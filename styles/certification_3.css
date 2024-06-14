@@ -5,7 +5,7 @@ main .category a {
     font-size:1.125rem; font-weight:500; letter-spacing:-0.2px; color:#999; line-height:52px; margin-right:50px; display:inline-block;
 }
 main .category > .active {
-    color:#013630; border-bottom:4px solid #013630;
+    color:#005B4F; border-bottom:4px solid #005B4F;
 }
 main .category a:last-child {margin-right:0;}
 /* -------------- main-wrap-step -------------- */
@@ -28,4 +28,18 @@ main .wrap .step a::after {
 }
 main .wrap .step a:last-child::after {display:none;}
 /* ------------- (위)공통 디자인 ------------- */
-/* -------------- main-wrap-product_caetgory -------------- */
+/* -------------- main-wrap-certi_contents -------------- */
+main .wrap .certi_contents {
+    width:100%; margin-top:65px;
+    display:inline-flex; flex-flow:row wrap; justify-content:space-between;
+}
+main .wrap .certi_contents .certi_item {
+    display:inline-block; width:calc((100% - (24px * 3)) / 4);
+    position:relative; margin-bottom:34px;
+}
+main .wrap .certi_contents .certi_item a {}
+main .wrap .certi_contents .certi_item a p {margin-bottom:13px;}
+main .wrap .certi_contents .certi_item a p img {width:100%; border:1px solid #ddd;}
+main .wrap .certi_contents .certi_item a h2 {
+    text-align:left; font-weight:500; letter-spacing:-0.2px; padding-left:10px;
+}

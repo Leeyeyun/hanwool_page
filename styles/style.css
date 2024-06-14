@@ -31,7 +31,7 @@ header .top_wrap nav .gnb > li .sub li:first-child a {
 header .top_wrap nav .gnb > li .sub li a {
     color:#fff; display:inline-block;
     font-size:0.875rem; width:144px; line-height:48px;
-    text-align:center; background-color:#013630;
+    text-align:center; background-color:#005B4F;
     border-bottom:1px solid #154640;
 }
 header .top_wrap nav .gnb > li .sub li:last-child a {
@@ -41,7 +41,7 @@ header .top_wrap nav .gnb > li .sub li:last-child a {
 /* header-lnb */
 header .top_wrap .lnb {}
 header .top_wrap .lnb .rectangle {width:16px; height:32px;
-    background-color:#013630; display:inline-block;
+    background-color:#005B4F; display:inline-block;
     position:absolute; right:0; top:45px;
 
 }
@@ -56,7 +56,7 @@ header .top_wrap .lnb .m_nav .all_nav img {}
 /* ============================== main 시작 ============================== */
 main {margin:0 auto;}
 /* main 공통 적용 */
-main .main_title {font-family: "Shrikhand", serif; font-size:3.75rem; color:#013630;}
+main .main_title {font-family: "Shrikhand", serif; font-size:3.75rem; color:#005B4F;}
 main .sub_txt {font-size:1.313rem; letter-spacing:-0.2px; line-height:1.5; margin:24px 0;}
 /* ------------------- (main)1. present ------------------- */
 main .present {width:100%;}
@@ -89,7 +89,7 @@ main .present .wrapper .present_img .top-container .swiper-wrapper .swiper-slide
 /* ------------------- (main)2. brand ------------------- */
 main .brand {
     padding:100px 0;
-    height:100%; background-color:#013630; width:100%;
+    height:100%; background-color:#005B4F; width:100%;
     position:relative; overflow:hidden;
 }
 /* (main)-brand 왼쪽 이미지 */
@@ -110,7 +110,7 @@ main .brand > .wrapper .mall_link .mall_link_txt {width:100%; text-align:right;}
 main .brand > .wrapper .mall_link .mall_link_txt p {font-weight:500; line-height:1.5; color:#fff; padding-right:25px;}
 main .brand > .wrapper .mall_link .mall_link_txt p:first-child {text-align:left; transform:translateX(230px);}
 main .brand > .wrapper .mall_link .mall_link_txt a {}
-main .brand > .wrapper .mall_link .mall_link_txt a > img {border:18px solid #013630;}
+main .brand > .wrapper .mall_link .mall_link_txt a > img {border:18px solid #005B4F;}
 main .brand > .wrapper .mall_link > .dash_arrow {
     position:absolute; text-align:center;
     left:calc(100% + 45px); bottom:100px; text-wrap:nowrap;
@@ -189,7 +189,7 @@ main .product .top .product-container .swiper-wrapper .swiper-slide a .txt {
 }
 main .product .top .product-container .swiper-wrapper .swiper-slide a .txt > * {font-weight:500; letter-spacing:-0.2px;}
 main .product .top .product-container .swiper-wrapper .swiper-slide a .txt h2 {font-size:1.313rem;}
-main .product .top .product-container .swiper-wrapper .swiper-slide a .txt h3 {color:#013630; margin:7px 0;}
+main .product .top .product-container .swiper-wrapper .swiper-slide a .txt h3 {color:#005B4F; margin:7px 0;}
 main .product .top .product-container .swiper-wrapper .swiper-slide a .txt p {color:#919190; font-weight:400;}
 /* e:main-product-카드swipe */
 /* line-wrap */
@@ -215,7 +215,7 @@ main .product .btm {
 main .product .btm .sub_title {width:50%;}
 /* btm-left always-morang-morang part */
 main .product .btm .sub_left {text-align:center; display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;}
-main .product .btm h2 {font-family: "Shrikhand", serif; font-size:2.5rem; text-wrap:nowrap; color:#013630; text-align:center;}
+main .product .btm h2 {font-family: "Shrikhand", serif; font-size:2.5rem; text-wrap:nowrap; color:#005B4F; text-align:center;}
 main .product .btm .sub_left p {font-size:1.125rem; line-height:1.5; letter-spacing:-0.2px; margin:16px 0 26px;}
 main .product .btm .sub_left a {
     background-image:url(../images/direction_deco.png);
@@ -243,7 +243,7 @@ main .product .btm .sub_right .swiper-pagination .swiper-pagination-bullet {
     background:#CDCDCD; width:12px; height:12px; margin-right:5px;
 }
 main .product .btm .sub_right .swiper-pagination .swiper-pagination-bullet-active {
-    background:#013630;
+    background:#005B4F;
 }
 /* ------------------- (main)4. overlap ------------------- */
 main .overlap_wrap {display:flex; flex-flow:column nowrap;}
@@ -272,7 +272,7 @@ footer .wrapper .top {display:flex; justify-content:space-between; margin-bottom
 /* footer-mobile button */
 footer .top .m_call {display:none;}
 footer .top .m_call .call:first-child {
-    width:100%; line-height:58px; background-color:#013630;
+    width:100%; line-height:58px; background-color:#005B4F;
     border:0; font-size:1.25rem; color:#fff; font-weight:700; letter-spacing:-0.2px;
 }
 footer .top .m_call .call:first-child::before {
@@ -281,7 +281,7 @@ footer .top .m_call .call:first-child::before {
     width:16px; height:16px; background-size:cover; margin-right:6px;
 }
 footer .top .m_call .call:last-child {
-    background-color:#013630; border:0; padding:20px; border-radius:50%;
+    background-color:#005B4F; border:0; padding:20px; border-radius:50%;
 }
 /* e:footer-mobile button */
 footer .wrapper .top .section_wrap {display:flex; position:relative; width:100%;}
