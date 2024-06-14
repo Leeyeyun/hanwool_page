@@ -1,5 +1,46 @@
-main .contents h3 {
+main {margin:0 auto; text-align:center; background-color:#F7F5E8;}
+main h1 {font-size:2.5rem; font-weight:700; padding-top:10px;}
+main .category {margin:20px 0 95px ;}
+main .category a {
+    font-size:1.125rem; font-weight:500; letter-spacing:-0.2px; color:#999; line-height:52px; margin-right:50px; display:inline-block;
+}
+main .category a:last-child {margin-right:0;}
+main .category > .active {color:#013630; border-bottom:4px solid #013630;}
+main .wrap {
+    background-color:#fff; max-width:1590px; margin:0 auto; border-radius:40px; padding:50px 120px; text-align:center; position:relative;
+}
+/* 카테고리 단계 .step 디자인 */
+main .wrap .step {text-align:left; display:flex; align-items:center;}
+main .wrap .step a {
+    font-size:0.875rem; font-weight:500; letter-spacing:-0.2px;
+    color:#666;
+}
+main .wrap .step a img {transform:translateY(1px);}
+main .wrap .step a::after {
+    content:''; display:inline-block;
+    background-image:url(../images/arrow_icon.svg);
+    width:10px; height:10px; background-size:cover;
+    rotate:-90deg; filter:opacity(0.7); margin:0 6px;
+}
+main .wrap .step a:last-child::after {display:none;}
+/* ------------- (위)공통 디자인 ------------- */
+main .wrap h2 {font-size:0.875rem; font-weight:700; letter-spacing:-0.2px; color:#013630; margin-top:64px;}
+main .wrap h3 {
     font-family:'GangwonEduAll';
     src: url('../font/GangwonEduAll.ttf') format('ttf');
-    font-size:3rem;
+    font-size:3rem; font-weight:700; margin:16px 0 207px;
 }
+main .wrap .img {
+    width:100%; margin:0 auto;
+    border:2px solid red;
+}
+main .wrap .img::before {
+    content:''; display:inline-block;
+    width:100%; height:265px; border-radius:15px; background-color:#F7F5E8;
+}
+main .wrap .img img {width:65%; position:absolute; left:0; top:0;}
+main .wrap .story {margin-top:64px; letter-spacing:-0.2px;}
+main .wrap .story p {line-height:1.7; color:#666; margin-bottom:30px;}
+main .wrap .story p:last-child {line-height:0;}
+main .wrap .story p em {color:#000; text-decoration:underline; font-weight:500;}
+main .wrap .story p span {color:#000; font-weight:500;}
