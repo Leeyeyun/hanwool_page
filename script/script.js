@@ -1,3 +1,4 @@
+// swiper
 const swiper1 = new Swiper('.top-container',{
     effect:'fade',
     autoplay:{},
@@ -39,3 +40,20 @@ const swiper3 = new Swiper('.qna-container',{
         type:'bullets',//필수작성
     },
 });
+
+// 상단 서브 메뉴 보이기
+// 변수 생성
+const sub = document.querySelectorAll('.sub');
+const gnb_li = document.querySelectorAll('.gnb > li');
+
+for(let i of sub)(i.style.display = 'none');
+for(let i of gnb_li)(
+    i.addEventListener('mouseover',()=>{
+        i.lastElementChild.style.display = 'block'
+    })
+)
+for(let i of gnb_li)(
+    i.addEventListener('mouseout',()=>{
+        i.lastElementChild.style.display = 'none'
+    })
+)
