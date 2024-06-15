@@ -28,16 +28,30 @@ main .wrap .step a::after {
 }
 main .wrap .step a:last-child::after {display:none;}
 /* ------------- (위)공통 디자인 ------------- */
+/* -------------- main-wrap-search_frm -------------- */
+main .wrap #search_frm {text-align:right; margin:10px 0 12px;}
+main .wrap #search_frm .search_wrap {
+    border:1px solid #e1e1e1; padding:10px 12px;
+    display:inline-flex; justify-content:space-between;
+}
+main .wrap #search_frm #search_option,
+main .wrap #search_frm #search,
+main .wrap #search_frm #search_btn {background-color:transparent; outline:none; border:0;}
+main .wrap #search_frm #search_option {
+    appearance:none; font-size:0.875rem; color:#999; letter-spacing:-0.2px;
+    width:76px;
+    background-image:url(../images/arrow_icon.svg);
+    background-repeat:no-repeat; background-position:right;
+}
 /* -------------- main-wrap-notice_contents -------------- */
-main .wrap .notice_contents {margin-top:65px;}
+main .wrap .notice_contents {}
 main .wrap .notice_contents .notice_item {
-    border:1px solid blue; display:flex; padding:21px; justify-content:space-between; margin-bottom:21px;
-    width:100%;
+    border:1px solid #ddd; display:flex; padding:21px; justify-content:space-between; margin-bottom:21px;
 }
 main .wrap .notice_contents .notice_item:last-child {margin-bottom:0;}
-main .wrap .notice_contents .notice_item > a {margin-right:30px;}
+main .wrap .notice_contents .notice_item > a {margin-right:30px; width:45%;}
 main .wrap .notice_contents .notice_item > a img {width:100%;}
-main .wrap .notice_contents .notice_item .notice_title {text-align:left; border:1px solid red;}
+main .wrap .notice_contents .notice_item .notice_title {text-align:left; width:55%;}
 main .wrap .notice_contents .notice_item .notice_title > a {
     font-weight:500; letter-spacing:-0.6px;
     line-height:57px; margin-bottom:10px; padding-left:16px;
