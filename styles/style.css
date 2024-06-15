@@ -21,7 +21,7 @@ header .top_wrap nav .gnb > li > a {
 header.top_wrap  nav .gnb > li:last-child a {}
 /* header-nav-sub(초기값 숨기기) */
 header .top_wrap nav .gnb > li .sub {
-    display:none;
+    /* display:none; */z-index:999;
     position:absolute; left:0; top:60px;
 }
 header .top_wrap nav .gnb > li .sub li {}
