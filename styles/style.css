@@ -29,25 +29,67 @@ header .top_wrap nav .gnb > li .sub li:first-child a {
     border-top-left-radius:10px; border-top-right-radius:10px;
 }
 header .top_wrap nav .gnb > li .sub li a {
-    color:#fff; display:inline-block;
+    display:inline-block;
     font-size:0.875rem; width:144px; line-height:48px;
     text-align:center; background-color:#005B4F;
-    border-bottom:1px solid #154640;
+    border-bottom:1px solid #154640;;
+    color:rgba(255, 255, 255, 0.8); transition:color 0.1s linear;
+}
+/* .sub li a hover시 밝아지기 애니메이션 */
+header .top_wrap nav .gnb > li .sub li a:hover {
+    color:rgba(255, 255, 255, 1);
 }
 header .top_wrap nav .gnb > li .sub li:last-child a {
     border-bottom-left-radius:10px; border-bottom-right-radius:10px;
 }
 /* e:header-nav-sub */
-/* header-lnb */
+/* header-lnb(오른쪽 사이드 내비) */
 header .top_wrap .lnb {}
 header .top_wrap .lnb .rectangle {width:16px; height:32px;
     background-color:#005B4F; display:inline-block;
-    position:absolute; right:0; top:45px;
+    position:absolute; right:0; top:45px; z-index:1100;
 
 }
-header .top_wrap .lnb .lnb_bg {}
+header .top_wrap .lnb .lnb_bg {
+    width:100vw; height:100vh;
+    position:fixed; background-color:rgba(1, 54, 48, 0.8);
+    left:0; top:0; z-index:999;
+}
 /* header-lnb-all_nav(초기값 숨기기) */
-header .top_wrap .lnb > .all_nav {display:none;}
+header .top_wrap .lnb > .all_nav {
+    position:fixed; background-color:white;
+    right:0; top:0; z-index:999;
+    height:100vh; width:35%;
+    padding:93px 50px 44px; text-align:left;
+    display:flex; flex-flow:column nowrap; justify-content:space-between;
+}
+header .top_wrap .lnb > .all_nav > ul {}
+header .top_wrap .lnb > .all_nav > ul > li {}
+header .top_wrap .lnb > .all_nav > ul > li > a {
+    font-size:3rem; font-weight:300; line-height:72px;
+    transition:color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+header .top_wrap .lnb > .all_nav > ul > li > a:hover {color:#0356A7; padding-left:10px;}
+header .top_wrap .lnb > .all_nav .btm {display:flex; justify-content:space-between;}
+header .top_wrap .lnb > .all_nav .btm .info {font-size:0.875rem; line-height:1.7;}
+header .top_wrap .lnb > .all_nav .btm .link {display:flex; flex-flow:column nowrap;}
+header .top_wrap .lnb > .all_nav .btm .link a {
+    display:flex; font-size:0.875rem; padding:0 10px; align-items:center;
+    border:1px solid #000; border-radius:5px; line-height:30px; width:130px;
+    margin-bottom:6px; transition:background-color 0.1s ease-out;
+}
+header .top_wrap .lnb > .all_nav .btm .link a:hover {
+    background-color:rgba(3, 86, 167, 0.2);
+}
+header .top_wrap .lnb > .all_nav .btm .link a:last-child {margin-bottom:0;}
+header .top_wrap .lnb > .all_nav .btm .link a::before {
+    display:inline-block; content:''; margin-right:10px;
+    background-image:url(../images/naver_icon.svg);
+    width:18px; height:18px; background-repeat:no-repeat; background-size: cover;
+}
+header .top_wrap .lnb > .all_nav .btm .link a:last-child:before {
+    background-image:url(../images/insta_icon.svg);
+}
 /* header-lnb-m_nav(초기값 숨기기) */
 header .top_wrap .lnb .m_nav {display:none;}
 header .top_wrap .lnb .m_nav .all_nav {position:absolute; right:18px; top:45px;}
