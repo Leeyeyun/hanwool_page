@@ -41,19 +41,37 @@ const swiper3 = new Swiper('.qna-container',{
     },
 });
 
-// 상단 서브 메뉴 보이기
-// 변수 생성
+// ---- 상단 서브 메뉴 보이기 ---- //
 const sub = document.querySelectorAll('.sub');
 const gnb_li = document.querySelectorAll('.gnb > li');
-
-for(let i of sub)(i.style.display = 'none');
+for (let i of sub){
+    i.style.height = '0';
+    i.style.overflow = 'hidden'
+    i.style.transition = 'height 0.3s ease-in-out';
+}
 for(let i of gnb_li)(
     i.addEventListener('mouseover',()=>{
-        i.lastElementChild.style.display = 'block'
+        const li_count = 50 * i.lastElementChild.childElementCount;
+        console.log(li_count)
+        i.lastElementChild.style.height = `${li_count}px`
     })
 )
 for(let i of gnb_li)(
     i.addEventListener('mouseout',()=>{
-        i.lastElementChild.style.display = 'none'
+        i.lastElementChild.style.height = '0'
     })
 )
+
+// ---- 오른쪽 사이드바 보이기 ---- //
+const lnb_bg = document.querySelector('.lnb_bg');
+const all_nav = document.querySelector('.all_nav');
+const rectangle = document.querySelector('.rectangle');
+all_nav.classList.add('all_nav_hide')
+all_nav.style.height = '0';
+all_nav.style.padding = '0'
+all_nav.style.overflow = 'hidden'
+lnb_bg.style.width = '0';
+rectangle.addEventListener('click',(e)=>{
+    e.preventDefault(); //a href 막기
+    all_nav.classList.toggle('all_nav_hide')
+})
