@@ -56,9 +56,12 @@
     header .top_wrap > nav {display:none;}
     /* 데스크탑 사이드 메뉴 숨기기 */
     header .top_wrap .lnb .rectangle {display:none;}
+    header .top_wrap .lnb .lnb_bg {display:none;}
+    header .top_wrap .lnb > .all_nav {display:none;}
     /* 모바일 사이드 메뉴(햄버거 스타일) 보이기 */
     header .top_wrap .lnb .m_nav {display:block;}
     header .top_wrap h1 a img {width:150px;}
+    /* header .top_wrap .lnb .m_nav */
 
     main .present .wrapper {padding:46px 18px;}
     /* main-brand */

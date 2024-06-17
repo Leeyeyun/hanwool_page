@@ -90,7 +90,7 @@ header .top_wrap .lnb > .all_nav .btm .link a:last-child:before {
     background-image:url(../images/insta_icon.svg);
 }
 /* header-lnb-m_nav(초기값 숨기기) */
-header .top_wrap .lnb .m_nav {/* display:none; */}
+header .top_wrap .lnb .m_nav {display:none;}
 header .top_wrap .lnb .m_nav .all_nav_m {position:absolute; right:18px; top:45px; z-index:1000;}
 header .top_wrap .lnb .m_nav .all_nav_m img {}
 header .top_wrap .lnb .m_nav > nav {
@@ -113,7 +113,7 @@ header .top_wrap .lnb .m_nav > nav::before {
     background-color:rgba(0, 0, 0, 0.6);
 }
 header .top_wrap .lnb .m_nav > nav .gnb > li > .sub {
-    text-align:left; padding:16px; background-color:#F3F3F5;
+    text-align:left; background-color:#F3F3F5;
     border-bottom:1px solid #ddd;
 }
 header .top_wrap .lnb .m_nav > nav .gnb > li > .sub li {padding:5px;}
