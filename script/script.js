@@ -49,18 +49,18 @@ for (let i of sub){
     i.style.overflow = 'hidden'
     i.style.transition = 'height 0.3s ease-in-out';
 }
-for(let i of gnb_li)(
+for(let i of gnb_li){
     i.addEventListener('mouseover',()=>{
         const li_count = 50 * i.lastElementChild.childElementCount;
         console.log(li_count)
         i.lastElementChild.style.height = `${li_count}px`
     })
-)
-for(let i of gnb_li)(
+}
+for(let i of gnb_li){
     i.addEventListener('mouseout',()=>{
         i.lastElementChild.style.height = '0'
     })
-)
+}
 
 // ---- 오른쪽 사이드바 보이기 ---- //
 const lnb = document.querySelector('.lnb');
@@ -75,11 +75,12 @@ all_nav.style.padding = '0';
 all_nav.style.overflow = 'hidden';
 lnb_bg.style.width = '0';
 let boolean = false;
-for(let i of all_nav_a)(
+for(let i of all_nav_a){
     i.style.lineHeight = '100px',
     i.style.opacity = '0'
-)
+}
 all_nav_btm.style.opacity = '0'
+rectangle.style.transition = 'width 0.5s, height 0.5s'
 
 rectangle.addEventListener('click',(e)=>{
     e.preventDefault(); //a href 막기
@@ -98,7 +99,9 @@ rectangle.addEventListener('click',(e)=>{
             i.style.opacity = '1',
             i.style.transition = 'line-height 0.5s 0.5s, opacity 0.5s 0.5s, color 0.3s ease-in-out, padding-left 0.3s ease-in-out'
         )
-        all_nav_btm.style.opacity = '1'
+        all_nav_btm.style.opacity = '1';
+        rectangle.style.width = '32px';
+        rectangle.style.height = '16px';
     }else{
         //transition 애니메이션 설정
         all_nav.style.transition = 'height 0.5s 0.1s ease-in, padding 0.5s 0.5s, overflow 0.5s 0.1s ease-in'
@@ -112,7 +115,9 @@ rectangle.addEventListener('click',(e)=>{
             i.style.opacity = '0',
             i.style.transition = 'line-height 0.5s, opacity 0.5s, color 0.3s ease-in-out, padding-left 0.3s ease-in-out'
         )
-        all_nav_btm.style.opacity = '0'
+        all_nav_btm.style.opacity = '0';
+        rectangle.style.width = '16px';
+        rectangle.style.height = '32px';
     };
     /* all_nav.style.height = boolean ? "100vh" : "0";
     all_nav.style.padding = boolean ? "93px 50px 44px" : "0";
