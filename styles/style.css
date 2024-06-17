@@ -51,7 +51,7 @@ header .top_wrap .lnb .rectangle {width:16px; height:32px;
 
 }
 header .top_wrap .lnb .lnb_bg {
-    width:100vw; height:100vh;
+    width:65%; height:100vh;
     position:fixed; background-color:rgba(1, 54, 48, 0.8);
     left:0; top:0; z-index:999;
 }
@@ -67,7 +67,6 @@ header .top_wrap .lnb > .all_nav > ul {}
 header .top_wrap .lnb > .all_nav > ul > li {}
 header .top_wrap .lnb > .all_nav > ul > li > a {
     font-size:3rem; font-weight:300; line-height:72px;
-    transition:color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
 }
 header .top_wrap .lnb > .all_nav > ul > li > a:hover {color:#0356A7; padding-left:10px;}
 header .top_wrap .lnb > .all_nav .btm {display:flex; justify-content:space-between;}
