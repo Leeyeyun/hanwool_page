@@ -28,9 +28,25 @@ main .wrap .step a::after {
 }
 main .wrap .step a:last-child::after {display:none;}
 /* ------------- (위)공통 디자인 ------------- */
+/* -------------- main-wrap-search_frm -------------- */
+main .wrap #search_frm {text-align:right; margin:10px 0 12px;}
+main .wrap #search_frm .search_wrap {
+    border:1px solid #e1e1e1; padding:10px 12px;
+    display:inline-flex; justify-content:space-between;
+}
+main .wrap #search_frm #search_option,
+main .wrap #search_frm #search,
+main .wrap #search_frm #search_btn {background-color:transparent; outline:none; border:0;}
+main .wrap #search_frm #search_option {
+    appearance:none; font-size:0.875rem; color:#999; letter-spacing:-0.2px;
+    width:76px;
+    background-image:url(../images/arrow_icon.svg);
+    background-repeat:no-repeat; background-position:right;
+}
+main .wrap #search_frm #search {width:100%; padding:0 16px; font-size:0.875rem;}
 /* -------------- main-wrap-certi_contents -------------- */
 main .wrap .certi_contents {
-    width:100%; margin-top:65px;
+    width:100%;
     display:inline-flex; flex-flow:row wrap; justify-content:space-between;
 }
 main .wrap .certi_contents .certi_item {

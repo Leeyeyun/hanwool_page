@@ -1,16 +1,18 @@
 main {margin:0 auto; text-align:center; background-color:#F7F5E8;}
 main h1 {font-size:2.5rem; font-weight:700; padding-top:10px;}
-main .category {margin:20px 0 95px ;}
+main .category {margin:20px 0 95px;}
 main .category a {
     font-size:1.125rem; font-weight:500; letter-spacing:-0.2px; color:#999; line-height:52px; margin-right:50px; display:inline-block;
+    transition:color 0.3s;
 }
+main .category a:hover {color:#005B4F;}
 main .category a:last-child {margin-right:0;}
 main .category > .active {color:#005B4F; border-bottom:4px solid #005B4F;}
 main .wrap {
     background-color:#fff; max-width:1590px; margin:0 auto; border-radius:40px; padding:50px 120px; text-align:center; position:relative;
 }
 /* 카테고리 단계 .step 디자인 */
-main .wrap .step {text-align:left; display:flex; align-items:center;}
+main .wrap .step {text-align:left; display:flex; align-items:center; margin:0 auto;}
 main .wrap .step a {
     font-size:0.875rem; font-weight:500; letter-spacing:-0.2px;
     color:#666;
@@ -31,16 +33,17 @@ main .wrap h3 {
     font-size:3rem; font-weight:700; margin:16px 0 54px;
 }
 main .wrap .img {
-    width:100%; margin:0 auto;
+    width:100%; margin:0 auto; position:relative; padding-bottom:70px;
     display:flex; flex-flow:column-reverse nowrap; align-items:center;
 }
 main .wrap .img::before {
-    content:''; display:inline-block; margin-top:-150px;
-    width:100%; height:265px; border-radius:15px; background-color:#F7F5E8;
+    content:''; display:block; position:absolute; bottom:0; left:0;
+    width:1350px; height:265px; border-radius:15px; background-color:#F7F5E8;
+    background-size:cover;
 }
 main .wrap .img img {width:880px; position:relative; z-index:1;}
 main .wrap .story {margin-top:64px; letter-spacing:-0.2px;}
-main .wrap .story p {line-height:1.7; color:#666; margin-bottom:30px;}
+main .wrap .story p {line-height:1.7; color:#666; margin-bottom:30px; word-break:keep-all;}
 main .wrap .story p:last-child {line-height:0;}
 main .wrap .story p em {color:#000; text-decoration:underline; font-weight:500;}
 main .wrap .story p span {color:#000; font-weight:500;}

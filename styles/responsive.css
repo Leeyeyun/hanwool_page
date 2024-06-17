@@ -5,6 +5,9 @@
     header .top_wrap .lnb .rectangle {right:18px;}
     main .present .wrapper {padding:90px 18px;}
     footer .wrapper, footer .wrapper .top a img {margin:0 18px;}
+    /* sub 페이지 공통 */
+    main .wrap {border-radius:0;}
+    main .story_wrap {padding:50px 18px;}
 }
 
 /* ------------------- width 1400px-brand 사진제거&조정 ------------------- */
@@ -24,9 +27,11 @@
     main .brand > .wrapper .title_store_link .store_link .dash_arrow::before {
         right:-50px;
     }
+    /* sub 페이지 반응형 - hanwool_info */
+    main .wrap .img::before {width:100%;}
 }
 
-/* ------------------- width 1200px-product grid 변경 ------------------- */
+/* ------------------- width 1200px-product grid 변경 & 반응형 ------------------- */
 @media screen and (max-width:1200px){
     main .product .btm {flex-flow:row-reverse;}
     main .product .btm .sub_left {width:calc(100% / 3);}
@@ -39,6 +44,10 @@
     main .product .line_wrap .line1 {left:calc(100% / 3);}
     main .product .line_wrap .line2 {left:calc(100% / 3 * 2); height:100%;}
     main .product .line_wrap .line3 {display:none;}
+
+    /* sub 페이지 반응형 - product, certification */
+    main .product_wrap, main .patent_wrap, main .notice_wrap, main .qna_wrap {padding:50px 18px;}
+    main .product_wrap, main .patent_wrap, main .notice_wrap, main .qna_wrap {padding-bottom:100px;}
 }
 
 /* ------------------- width 1060px ------------------- */
@@ -83,6 +92,25 @@
     /* footer 로고 크기 & 간격 조정 */
     footer .wrapper .top .section_wrap section:nth-child(2) {margin-right:30px;}
     footer .wrapper .top a img {width:210px;}
+    /* sub 페이지 반응형 */
+    main .category {display:none;}
+    main > h1 {margin-bottom:33px;}
+    main .wrap .img {padding-bottom:40px;}
+    main .wrap .img::before {height:70%;}
+    main .wrap .img img {width:80%;}
+
+    /* sub 페이지 반응형 - product */
+    main .wrap .product_category {margin-top:25px;}
+    main .wrap .product_category li {margin:0 10px;}
+    main .wrap .product_category li a {font-size:0.875rem;}
+    main .wrap .product_contents .product_item, main .wrap .certi_contents .certi_item {width:calc((100% - (13px * 2)) / 3);}
+    main .wrap .certi_contents .certi_item a h2 {font-size:0.875rem;}
+    main .wrap .notice_contents .notice_item {padding:18px;}
+    main .wrap .notice_contents .notice_item > a {margin-right:16px; width:50%;}
+    main .wrap .notice_contents .notice_item .notice_title {text-align:left; width:50%;}
+    main .wrap .notice_contents .notice_item .notice_title p {font-size:0.875rem;}
+    main .wrap .qna_contents .q span {font-size:0.938rem;}
+    main .wrap .qna_contents .a p {font-size:0.875rem;}
 }
 
 /* ------------------- width 780px ------------------- */
@@ -155,4 +183,28 @@
     main .overlap_wrap .overlap_contents .ask a br {display:block;}
     /* main-overlap */
     main .overlap_wrap .overlap_contents > a img {transform:scale(0.5);}
+
+    /* sub 페이지 반응형 */
+    main .wrap .story p, main .wrap .story p em, main .wrap .story p span {font-size:0.938rem;}
+    main .wrap .story p .hide {display:none;}
+    main .wrap h3 {font-size:2.188rem;}
+    /* sub 페이지 반응형 - product */
+    main .wrap .product_contents .product_item {width:calc((100% - 13px) / 2);}
+    main .wrap .product_contents .product_item .item_txt a,
+    main .wrap .product_contents .product_item .item_txt a h3 {text-align:center; padding:10px 0;}
+    main .wrap #search_frm .search_wrap {width:100%;}
+    main .wrap #search_frm {margin-top:32px;}
+    main .product_wrap #search_frm {margin-top:0;}
+    main .wrap .certi_contents .certi_item a h2 {
+        overflow:hidden; text-overflow:ellipsis;
+        white-space:nowrap; word-break:break-all;
+    }
+    main .wrap .notice_contents .notice_item {
+        flex-flow:column wrap;
+    }
+    main .wrap .notice_contents .notice_item > a {margin-right:0; width:100%;}
+    main .wrap .notice_contents .notice_item .notice_title {text-align:left; width:100%;}
+    main .wrap .notice_contents .notice_item .notice_title a {font-size:0.938rem; text-align:center;}
+    main .wrap .notice_contents .notice_item .notice_title p {font-size:0.875rem;}
+    main .wrap .qna_contents .a p .hide {display:none;}
 }
