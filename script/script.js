@@ -52,7 +52,6 @@ for (let i of sub){
 for(let i of gnb_li){
     i.addEventListener('mouseover',()=>{
         const li_count = 50 * i.lastElementChild.childElementCount;
-        console.log(li_count)
         i.lastElementChild.style.height = `${li_count}px`
     })
 }
@@ -62,12 +61,57 @@ for(let i of gnb_li){
     })
 }
 
-// ---- 오른쪽 사이드바 보이기 ---- //
+// ---- 모바일 내비 복제 및 all_nav 클릭시 보이기 ---- //
+const nav = document.querySelector('nav')
+const nav_clone = nav.cloneNode(true) //nav복제 변수
+const m_nav = document.querySelector('.m_nav') //복제 대상 붙여넣기 용
+const all_nav_m = document.querySelector('.all_nav_m')
+m_nav.appendChild(nav_clone)
+const sub_m = m_nav.querySelectorAll('.sub');
+const gnb_li_m = m_nav.querySelectorAll('.gnb > li');
+console.log(sub_m, gnb_li_m)
+/* for(let i of sub_m){
+    i.style.overflow = 'visible',
+    i.style.height = '100%',
+    i.style.display = 'none'
+}
+for(let i of gnb_li_m){
+    i.addEventListener('click',(e)=>{
+        e.preventDefault();
+        console.log(i.children[1])
+        for(let i of sub_m){i.style.display = 'none'}
+        i.children[1].style.display = 'block' //css에서 만약 flex,grid로 디자인했다면 block이 아닌 해당 디자인으로 작성해야한다!
+    })
+} */
+
+for(let i of sub_m){
+    i.style.overflow = 'hidden',
+    i.style.height = '0',
+    i.style.padding = '0'
+}
+for(let i of gnb_li_m){
+    i.addEventListener('click',(e)=>{
+        e.preventDefault();
+        console.log(i.children[1])
+        for(let i of sub_m){
+            i.style.transition = 'height 0.2s 0.2s, overflow 0.2s 0.2s, padding 0.2s',
+            i.style.overflow = 'hidden',
+            i.style.height = '0',
+            i.style.padding = '0'
+        }
+        i.children[1].style.transition = 'height 0.2s, overflow 0.2s, padding 0.2s',
+        i.children[1].style.overflow = 'visible',
+        i.children[1].style.height = '100%',
+        i.children[1].style.padding = '16px'
+    })
+}
+
+// ---- 오른쪽 사이드바(데스크탑) 보이기 ---- //
 const lnb = document.querySelector('.lnb');
 const lnb_bg = lnb.querySelector('.lnb_bg');
 const all_nav = lnb.querySelector('.all_nav');
-const all_nav_a = all_nav.querySelectorAll('ul li a')
-const all_nav_btm = all_nav.querySelector('.btm')
+const all_nav_a = all_nav.querySelectorAll('ul li a');
+const all_nav_btm = all_nav.querySelector('.btm');
 const rectangle = document.querySelector('.rectangle');
 //숨기는 초기값 설정
 all_nav.style.height = '0';
