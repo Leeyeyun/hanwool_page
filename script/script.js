@@ -63,15 +63,58 @@ for(let i of gnb_li)(
 )
 
 // ---- 오른쪽 사이드바 보이기 ---- //
-const lnb_bg = document.querySelector('.lnb_bg');
-const all_nav = document.querySelector('.all_nav');
+const lnb = document.querySelector('.lnb');
+const lnb_bg = lnb.querySelector('.lnb_bg');
+const all_nav = lnb.querySelector('.all_nav');
+const all_nav_a = all_nav.querySelectorAll('ul li a')
+const all_nav_btm = all_nav.querySelector('.btm')
 const rectangle = document.querySelector('.rectangle');
-all_nav.classList.add('all_nav_hide')
+//숨기는 초기값 설정
 all_nav.style.height = '0';
-all_nav.style.padding = '0'
-all_nav.style.overflow = 'hidden'
+all_nav.style.padding = '0';
+all_nav.style.overflow = 'hidden';
 lnb_bg.style.width = '0';
+let boolean = false;
+for(let i of all_nav_a)(
+    i.style.lineHeight = '100px',
+    i.style.opacity = '0'
+)
+all_nav_btm.style.opacity = '0'
+
 rectangle.addEventListener('click',(e)=>{
     e.preventDefault(); //a href 막기
-    all_nav.classList.toggle('all_nav_hide')
+    boolean = !boolean; //boolean의 부정값을 대입하여 1-0-1-0 나오게 하기
+    if(boolean == true){
+        //transition 애니메이션 설정
+        all_nav.style.transition = 'height 0.5s ease-in, padding 0.5s ease-in, overflow 0.5s ease-in'
+        lnb_bg.style.transition = 'width 0.5s ease-in'
+        all_nav_btm.style.transition = 'opacity 0.5s 0.5s'
+        all_nav.style.height = '100vh';
+        all_nav.style.padding = '93px 50px 44px';
+        all_nav.style.overflow = 'visible';
+        lnb_bg.style.width = '65%';
+        for(let i of all_nav_a)(
+            i.style.lineHeight = '72px',
+            i.style.opacity = '1',
+            i.style.transition = 'line-height 0.5s 0.5s, opacity 0.5s 0.5s, color 0.3s ease-in-out, padding-left 0.3s ease-in-out'
+        )
+        all_nav_btm.style.opacity = '1'
+    }else{
+        //transition 애니메이션 설정
+        all_nav.style.transition = 'height 0.5s 0.1s ease-in, padding 0.5s 0.5s, overflow 0.5s 0.1s ease-in'
+        all_nav_btm.style.transition = 'opacity 0.5s'
+        all_nav.style.height = '0';
+        all_nav.style.padding = '0';
+        all_nav.style.overflow = 'hidden';
+        lnb_bg.style.width = '0';
+        for(let i of all_nav_a)(
+            i.style.lineHeight = '100px',
+            i.style.opacity = '0',
+            i.style.transition = 'line-height 0.5s, opacity 0.5s, color 0.3s ease-in-out, padding-left 0.3s ease-in-out'
+        )
+        all_nav_btm.style.opacity = '0'
+    };
+    /* all_nav.style.height = boolean ? "100vh" : "0";
+    all_nav.style.padding = boolean ? "93px 50px 44px" : "0";
+    all_nav.style.overflow = boolean ? "visible" : "hidden"; */
 })
