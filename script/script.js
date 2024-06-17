@@ -69,40 +69,31 @@ const all_nav_m = document.querySelector('.all_nav_m')
 m_nav.appendChild(nav_clone)
 const sub_m = m_nav.querySelectorAll('.sub');
 const gnb_li_m = m_nav.querySelectorAll('.gnb > li');
-console.log(sub_m, gnb_li_m)
-/* for(let i of sub_m){
-    i.style.overflow = 'visible',
-    i.style.height = '100%',
-    i.style.display = 'none'
-}
-for(let i of gnb_li_m){
-    i.addEventListener('click',(e)=>{
-        e.preventDefault();
-        console.log(i.children[1])
-        for(let i of sub_m){i.style.display = 'none'}
-        i.children[1].style.display = 'block' //css에서 만약 flex,grid로 디자인했다면 block이 아닌 해당 디자인으로 작성해야한다!
-    })
-} */
+const sub_a_m = m_nav.querySelectorAll('.sub > li > a');
+/* console.log(sub_m, gnb_li_m, sub_a_m) */
 
 for(let i of sub_m){
-    i.style.overflow = 'hidden',
-    i.style.height = '0',
-    i.style.padding = '0'
+    /* i.style.overflow = 'hidden',
+    i.style.height = '0' */
+    i.style.display = 'none'
+    i.children[1].style.display = 'block'
 }
+//for(let i of sub_a_m){i.style.opacity = '0'}
+
 for(let i of gnb_li_m){
     i.addEventListener('click',(e)=>{
         e.preventDefault();
         console.log(i.children[1])
         for(let i of sub_m){
-            i.style.transition = 'height 0.2s 0.2s, overflow 0.2s 0.2s, padding 0.2s',
-            i.style.overflow = 'hidden',
-            i.style.height = '0',
-            i.style.padding = '0'
+            //i.style.transition = 'height 0.5s, overflow 0.5s',
+            //i.style.overflow = 'hidden',
+            //i.style.height = '0'
+            i.style.display = 'none';
         }
-        i.children[1].style.transition = 'height 0.2s, overflow 0.2s, padding 0.2s',
+        /* i.children[1].style.transition = 'height 0.2s, overflow 0.2s',
         i.children[1].style.overflow = 'visible',
-        i.children[1].style.height = '100%',
-        i.children[1].style.padding = '16px'
+        i.children[1].style.height = '100%' */
+        i.children[1].style.display = 'block';
     })
 }
 
