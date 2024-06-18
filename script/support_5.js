@@ -3,6 +3,24 @@ const qna_contents = document.querySelector ('.qna_contents');
 const q = qna_contents.querySelectorAll('.q');
 const a = qna_contents.querySelectorAll('.a');
 console.log(qna_contents, q, a);
+for(let i of a){
+    i.classList.add('a_off')
+}
+q[0].addEventListener('click',()=>{
+    a[0].classList.toggle('a_off')
+})
+q[1].addEventListener('click',()=>{
+    a[1].classList.toggle('a_off')
+})
+q[2].addEventListener('click',()=>{
+    a[2].classList.toggle('a_off')
+})
+q[3].addEventListener('click',()=>{
+    a[3].classList.toggle('a_off')
+})
+q[4].addEventListener('click',()=>{
+    a[4].classList.toggle('a_off')
+})
 
 /* for(let i of q){
     i.addEventListener('click',()=>{
@@ -14,10 +32,8 @@ console.log(qna_contents, q, a);
     a[0].classList.toggle('on')
 }) */
 
-for(let i of a){i.style.display = 'none'}
-/* a[0].style.display = 'block' */
 
-for(let i of q){
+/* for(let i of q){
     i.addEventListener('click',()=>{
         boolean = !boolean;
         if(boolean == true){
@@ -28,7 +44,7 @@ for(let i of q){
             i.nextElementSibling.style.display = 'none';
         }
     })
-}
+} */
 
 // ---- 상단 서브 메뉴 보이기 ---- //
 const nav = document.querySelector('nav')
