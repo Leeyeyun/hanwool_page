@@ -42,8 +42,9 @@ const swiper3 = new Swiper('.qna-container',{
 });
 
 // ---- 상단 서브 메뉴 보이기 ---- //
-const sub = document.querySelectorAll('.sub');
-const gnb_li = document.querySelectorAll('.gnb > li');
+const nav = document.querySelector('nav')
+const sub = nav.querySelectorAll('.sub');
+const gnb_li = nav.querySelectorAll('.gnb > li');
 for (let i of sub){
     i.style.height = '0';
     i.style.overflow = 'hidden'
@@ -58,42 +59,6 @@ for(let i of gnb_li){
 for(let i of gnb_li){
     i.addEventListener('mouseout',()=>{
         i.lastElementChild.style.height = '0'
-    })
-}
-
-// ---- 모바일 내비 복제 및 all_nav 클릭시 보이기 ---- //
-const nav = document.querySelector('nav')
-const nav_clone = nav.cloneNode(true) //nav복제 변수
-const m_nav = document.querySelector('.m_nav') //복제 대상 붙여넣기 용
-const all_nav_m = document.querySelector('.all_nav_m')
-m_nav.appendChild(nav_clone)
-const sub_m = m_nav.querySelectorAll('.sub');
-const gnb_li_m = m_nav.querySelectorAll('.gnb > li');
-const sub_a_m = m_nav.querySelectorAll('.sub > li > a');
-/* console.log(sub_m, gnb_li_m, sub_a_m) */
-
-for(let i of sub_m){
-    /* i.style.overflow = 'hidden',
-    i.style.height = '0' */
-    i.style.display = 'none'
-    i.children[1].style.display = 'block'
-}
-//for(let i of sub_a_m){i.style.opacity = '0'}
-
-for(let i of gnb_li_m){
-    i.addEventListener('click',(e)=>{
-        e.preventDefault();
-        console.log(i.children[1])
-        for(let i of sub_m){
-            //i.style.transition = 'height 0.5s, overflow 0.5s',
-            //i.style.overflow = 'hidden',
-            //i.style.height = '0'
-            i.style.display = 'none';
-        }
-        /* i.children[1].style.transition = 'height 0.2s, overflow 0.2s',
-        i.children[1].style.overflow = 'visible',
-        i.children[1].style.height = '100%' */
-        i.children[1].style.display = 'block';
     })
 }
 
@@ -158,3 +123,63 @@ rectangle.addEventListener('click',(e)=>{
     all_nav.style.padding = boolean ? "93px 50px 44px" : "0";
     all_nav.style.overflow = boolean ? "visible" : "hidden"; */
 })
+
+// ---- 모바일 내비 복제 및 변수 지정 ---- //
+const nav_clone = nav.cloneNode(true) //nav복제 변수
+const m_nav = document.querySelector('.m_nav') //복제 대상 붙여넣기 용
+const all_nav_m = document.querySelector('.all_nav_m')
+const all_nav_m_img = all_nav_m.querySelector('img')
+console.log(all_nav_m_img.src)
+m_nav.appendChild(nav_clone)
+const sub_m = m_nav.querySelectorAll('.sub');
+const gnb_li_m = m_nav.querySelectorAll('.gnb > li');
+const sub_a_m = m_nav.querySelectorAll('.sub > li > a');
+
+//all_nav_m 클릭시 nav보이기&아이콘 변경
+all_nav_m.addEventListener('click',(e)=>{
+    e.preventDefault();
+    boolean = !boolean
+    if(boolean == true){
+        console.log(boolean)
+        all_nav_m_img.src = './images/close_icon.svg';
+        all_nav_m.nextElementSibling.style.display = 'block';
+    }else{
+        console.log(boolean)
+        all_nav_m_img.src = './images/m_nav_icon.svg';
+        all_nav_m.nextElementSibling.style.display = 'none';
+    }
+})
+
+//gnb_li_m 클릭시 해당 sub 메뉴 보이기&다른 sub 숨기기
+for(let b of gnb_li_m){
+    b.addEventListener('click',(e)=>{
+        e.preventDefault();
+        for(let j of sub_m){
+            j.style.transition = 'height 0.3s, overflow 0.3s'
+            j.style.height = '0';
+            j.style.overflow = 'hidden';
+        }
+        console.log(b.children[1].children.length)
+        b.children[1].style.height = `calc(26px * ${b.children[1].children.length} + 32px)`;
+        b.children[1].style.overflow = 'visible';
+    })
+}
+
+//overlap hover 애니메이션
+const overlap_contents = document.querySelectorAll('.overlap_contents')
+for(let i of overlap_contents){
+    i.nextElementSibling.style.transition = 'margin-top 0.5s'
+    i.addEventListener('mouseover',()=>{
+        i.nextElementSibling.style.marginTop = '0'
+        i.children[0].style.backgroundColor = '#013630'
+        i.children[0].style.color = '#fff'
+        i.children[0].children[0].style.filter = 'invert(1)'
+    })
+    i.addEventListener('mouseout',()=>{
+        i.nextElementSibling.style.marginTop = '-140px'
+        i.children[0].style.backgroundColor = '#fff'
+        i.children[0].style.color = '#000'
+        i.children[0].children[0].style.filter = 'invert(0)'
+    })
+}
+

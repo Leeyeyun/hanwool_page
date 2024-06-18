@@ -9,7 +9,24 @@ console.log(qna_contents, q, a);
         i.nextElementSibling.classList.toggle('on')
     })
 } */
-q[0].addEventListener('click',()=>{
+/* q[0].addEventListener('click',()=>{
     console.log(a[0])
     a[0].classList.toggle('on')
-})
+}) */
+
+for(let i of a){i.style.display = 'none'}
+/* a[0].style.display = 'block' */
+let boolean = false;
+
+for(let i of q){
+    i.addEventListener('click',()=>{
+        boolean = !boolean;
+        if(boolean == true){
+            console.log(1)
+            i.nextElementSibling.style.display = 'block';
+        }else{
+            console.log(0)
+            i.nextElementSibling.style.display = 'none';
+        }
+    })
+}
