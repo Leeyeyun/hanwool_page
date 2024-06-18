@@ -1,4 +1,3 @@
-<!--============================= header =============================-->
 <header>
     <div class="top_wrap">
         <h1><a href="./index.html"><img src="./images/logo.png" alt="볕이들다"></a></h1>
