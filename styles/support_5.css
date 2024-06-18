@@ -45,6 +45,7 @@ main .wrap #search_frm #search_option {
     background-image:url(../images/arrow_icon.svg);
     background-repeat:no-repeat; background-position:right;
 }
+main .wrap #search_frm #search {width:100%; padding:0 16px; font-size:0.875rem;}
 /* -------------- main-wrap-qna -------------- */
 main .wrap .qna_contents {border-bottom:1px solid #ddd;}
 main .wrap .qna_contents .q {}

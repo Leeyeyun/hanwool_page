@@ -212,7 +212,9 @@ main .overlap_wrap .overlap_contents .ask {
     background-position:center; background-size:cover;
     text-align:center;
 }
-main .overlap_wrap .overlap_contents .ask a {display:flex; justify-content:center; align-items:center; height:100%;}
+main .overlap_wrap .overlap_contents .ask a {
+    display:flex; justify-content:center; align-items:center; height:100%;
+}
 main .overlap_wrap .overlap_contents .ask a br {display:none;}
 main .overlap_wrap .overlap_contents .ask a h3 {
     font-size:5.75rem; font-weight:700; color:#fff; letter-spacing:0.2px; line-height:1.2;
