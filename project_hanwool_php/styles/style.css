@@ -1,0 +1,220 @@
+/* ============================== main 시작 ============================== */
+main {margin:0 auto;}
+/* main 공통 적용 */
+main .main_title {font-family: "Shrikhand", serif; font-size:3.75rem; color:#013630;}
+main .sub_txt {font-size:1.313rem; letter-spacing:-0.2px; line-height:1.5; margin:24px 0;}
+/* ------------------- (main)1. present ------------------- */
+main .present {width:100%;}
+main .present .wrapper {
+    padding:90px 0; margin:0 auto;
+    max-width:1590px; position:relative;
+}
+main .present .wrapper .main1 {font-size:3.375rem; line-height:1.1; margin-bottom:28px;}
+
+/* (main)-present 왼쪽 이미지+스크롤화살표 */
+main .present .wrapper .present_img {
+    width:100%;
+    display:flex; justify-content:space-between;
+}
+main .present .wrapper .present_img .left {width:60%; margin-right:46px;}
+main .present .wrapper .present_img .left > p > img {width:100%;}
+main .present .wrapper .present_img .left .scroll_arrow {}
+main .present .wrapper .present_img .left .scroll_arrow p:first-child {
+    font-size:0.75rem; font-weight:700; margin-bottom:18px;
+}
+main .present .wrapper .present_img .left .scsroll_arrow > p > img {width:24px;}
+/* (main)-present 오른쪽 카드swipe */
+main .present .wrapper .present_img .top-container {width:100%;}
+main .present .wrapper .present_img .top-container .swiper-wrapper {}
+main .present .wrapper .present_img .top-container > .swiper-wrapper > .swiper-slide {}
+main .present .wrapper .present_img .top-container .swiper-wrapper .swiper-slide > img {width:100%; height:auto;}
+.top-container .swiper-pagination {
+    text-align:right; bottom:40px;
+}
+/* ------------------- (main)2. brand ------------------- */
+main .brand {
+    padding:100px 0;
+    height:100%; background-color:#013630; width:100%;
+    position:relative; overflow:hidden;
+}
+/* (main)-brand 왼쪽 이미지 */
+main .brand > p {
+    position:absolute; left:0; bottom:100px; width:28%;
+    overflow:hidden;
+}
+main .brand > .wrapper {
+    max-width:1590px; margin:0 auto; position:relative;
+    display:flex; justify-content:space-between; height:100%;
+}
+/* (main)-brand wrapper2 mall_link */
+main .brand > .wrapper .mall_link {
+    z-index:5; width:50%;
+    position:relative;
+}
+main .brand > .wrapper .mall_link .mall_link_txt {width:100%; text-align:right;}
+main .brand > .wrapper .mall_link .mall_link_txt p {font-weight:500; line-height:1.5; color:#fff; padding-right:25px;}
+main .brand > .wrapper .mall_link .mall_link_txt p:first-child {text-align:left; transform:translateX(230px);}
+main .brand > .wrapper .mall_link .mall_link_txt a {}
+main .brand > .wrapper .mall_link .mall_link_txt a > img {
+    border:18px solid #013630;
+    transition:transform 0.3s;
+}
+main .brand > .wrapper .mall_link .mall_link_txt a > img:hover {
+    transform:scale(1.01);
+}
+main .brand > .wrapper .mall_link > .dash_arrow {
+    position:absolute; text-align:center;
+    left:calc(100% + 45px); bottom:100px; text-wrap:nowrap;
+}
+main .brand > .wrapper .mall_link > .dash_arrow::before {
+    content:''; display:inline-block; background-repeat:no-repeat;
+    width:86px; height:86px; position:absolute; right:30px; bottom:70px;
+    background-image:url(../images/dash_arrow.svg);
+}
+main .brand > .wrapper .dash_arrow span {color:#fff; font-size:1.25rem; line-height:1.5; letter-spacing:-0.2px;}
+/* (main)-brand wrapper2 */
+/* (main)-brand wrapper2-2 브랜드 타이틀&설명 */
+main .brand > .wrapper .title_store_link {
+    width:50%; position:relative;
+}
+main .brand > .wrapper .title_store_link .brand_title {
+    position:absolute; left:0; top:0; z-index:55;
+    margin:55px 0 0 20px;
+}
+main .brand > .wrapper .title_store_link .brand_title .main2,
+main .brand > .wrapper .title_store_link .brand_title .sub_txt {color:#fff;}
+/* (main)-brand wrapper2-2 스토어 바로가기 */
+main .brand > .wrapper .title_store_link .store_link {
+    position:absolute; right:0; bottom:0;
+}
+main .brand > .wrapper .title_store_link .store_link a img {transition:transform 0.3s;}
+main .brand > .wrapper .title_store_link .store_link a img:hover {transform:scale(1.01);}
+main .brand > .wrapper .title_store_link .store_link .dash_arrow {
+    position:absolute; left:-150px; bottom:0; text-align:center;
+}
+main .brand > .wrapper .title_store_link .store_link .dash_arrow::before {
+    content:''; display:inline-block; background-repeat:no-repeat;
+    width:86px; height:86px; position:absolute; right:-50px; bottom:70px;
+    background-image:url(../images/dash_arrow_right.svg);
+}
+/* ------------------- (main)3. product ------------------- */
+main .product {position:relative; height:100%;}
+main .product .top {display:flex; align-items:center; position:relative;}
+main .product .top .product_title {
+    text-align:center; width:25%; position:relative;
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
+}
+/* 페이지네이션&이전다음버튼 디자인 */
+main .product .top .product_title .product_pagination {
+    height:35px; 
+}
+main .product .top .product_title .product_pagination .swiper-pagination {
+    position:relative; margin-top:-18px;
+}
+main .product .top .product_title .product_pagination .prev_next {
+    position:relative; width:160px; height:35px;
+}
+main .product .top .product_title .product_pagination .prev_next .swiper-button-prev {
+    content:''; display:inline-block;
+    background-image:url(../images/prev_icon.png);
+    width:29px; background-repeat:no-repeat;
+    color:transparent; background-position-y:15px;
+}
+main .product .top .product_title .product_pagination .prev_next .swiper-button-next {
+    content:''; display:inline-block;
+    background-image:url(../images/next_icon.png);
+    width:29px; background-repeat:no-repeat;
+    color:transparent; background-position-y:15px;
+}
+/* main-product-카드swipe */
+main .product .top .product-container {width:75%; overflow:hidden;}
+main .product .top .product-container .swiper-wrapper .swiper-slide {}
+main .product .top .product-container .swiper-wrapper .swiper-slide > a {
+    padding:150px 35px;
+    display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;
+}
+main .product .top .product-container .swiper-wrapper .swiper-slide > a > p {}
+main .product .top .product-container .swiper-wrapper .swiper-slide > a > p > img {width:100%;}
+/* product 상품 설명 디자인 */
+main .product .top .product-container .swiper-wrapper .swiper-slide a .txt {
+    margin-top:85px;
+    margin-left:20px; width:100%;
+}
+main .product .top .product-container .swiper-wrapper .swiper-slide a .txt > * {font-weight:500; letter-spacing:-0.2px;}
+main .product .top .product-container .swiper-wrapper .swiper-slide a .txt h2 {font-size:1.313rem;}
+main .product .top .product-container .swiper-wrapper .swiper-slide a .txt h3 {color:#013630; margin:7px 0;}
+main .product .top .product-container .swiper-wrapper .swiper-slide a .txt p {color:#919190; font-weight:400;}
+/* e:main-product-카드swipe */
+/* line-wrap */
+main .product .line_wrap {
+    width:100%; height:100%;
+    position:absolute; left:0; top:0;
+}
+main .product .line_wrap .line {
+    width:1px; background-color:#000;
+    position:absolute; height:100%;
+}
+main .product .line_wrap .line1 {left:25%;}
+main .product .line_wrap .line2 {left:50%; z-index:5;}
+main .product .line_wrap .line3 {left:75%;}
+main .product .line_wrap .line4 {height:1px; width:100%; background-color:#000; z-index:5; bottom:calc((100% / 3) + 49px);}
+/* e:main-product-linewrap */
+main .product .btm {
+    display:flex; /* border:2px solid blue; */
+    position:relative; z-index:3;
+    background-color:#F7F5E8;
+    border-top:1px solid #000;
+}
+main .product .btm .sub_title {width:50%;}
+/* btm-left always-morang-morang part */
+main .product .btm .sub_left {text-align:center; display:flex; flex-flow:column nowrap; justify-content:center; align-items:center;}
+main .product .btm h2 {font-family: "Shrikhand", serif; font-size:2.5rem; text-wrap:nowrap; color:#013630; text-align:center;}
+main .product .btm .sub_left p {font-size:1.125rem; line-height:1.5; letter-spacing:-0.2px; margin:16px 0 26px;}
+main .product .btm .sub_left a {
+    background-image:url(../images/direction_deco.png);
+    background-repeat:no-repeat; display:inline-block;
+    width:206px; height:64px; line-height:64px;
+}
+/* btm-right story-of-nature part */
+main .product .btm .sub_right {
+    text-align:left; position:relative;
+    padding:49px 45px;
+}
+main .product .btm .sub_right h2 {text-align:left;}
+main .product .btm .sub_right .qna-container {/* margin:12px 0 163px;  */ overflow:hidden; margin:12px 0 163px;}
+main .product .btm .sub_right .qna-container .swiper-wrapper {}
+main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide {}
+main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide p {font-size:1.313rem; letter-spacing:-0.2px; line-height:1.7;}
+main .product .btm .sub_right .qna-container .swiper-wrapper .swiper-slide p em {font-weight:500; margin-right:22px;}
+/* pagination css */
+main .product .btm .sub_right .swiper-pagination {
+    display:flex; position:relative;
+    justify-content:flex-start; align-items:center;
+}
+main .product .btm .sub_right .swiper-pagination .swiper-pagination-bullet {
+    opacity:1; /* 기본값 0.2 */
+    background:#CDCDCD; width:12px; height:12px; margin-right:5px;
+}
+main .product .btm .sub_right .swiper-pagination .swiper-pagination-bullet-active {
+    background:#013630;
+}
+/* ------------------- (main)4. overlap ------------------- */
+main .overlap_wrap {display:flex; flex-flow:column nowrap;}
+main .overlap_wrap .overlap_contents {margin-top:-140px; width:100vw; overflow:hidden; position:relative;}
+main .overlap_wrap .overlap_contents:first-child {margin-top:0;}
+main .overlap_wrap .overlap_contents > a {display:flex; align-items:center; height:280px; background-color:#fff; border-top:1px solid #222; border-bottom:1px solid #222;}
+main .overlap_wrap .overlap_contents > a img {}
+main .overlap_wrap .overlap_contents > a span {font-size:8.438rem; font-weight:700; letter-spacing:-0.2px; margin:0 3px 0 40px; text-wrap:nowrap;}
+main .overlap_wrap .overlap_contents > a img:last-child {}
+/*  (main)4. overlap - ask */
+main .overlap_wrap .overlap_contents .ask {
+    height:442px; background-image:url(../images/ask_bg.jpg);
+    background-position:center; background-size:cover;
+    text-align:center;
+}
+main .overlap_wrap .overlap_contents .ask a {display:flex; justify-content:center; align-items:center; height:100%;}
+main .overlap_wrap .overlap_contents .ask a br {display:none;}
+main .overlap_wrap .overlap_contents .ask a h3 {
+    font-size:5.75rem; font-weight:700; color:#fff; letter-spacing:0.2px; line-height:1.2;
+}
+main .overlap_wrap .overlap_contents .ask a p {font-size:1.25rem; letter-spacing:-0.2px; color:#fff; transform:translateY(-20px);}
