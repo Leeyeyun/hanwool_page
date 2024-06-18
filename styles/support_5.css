@@ -56,8 +56,7 @@ main .wrap .qna_contents .q .q_open {
 main .wrap .qna_contents .q span {font-weight:500; letter-spacing:-0.2px; color:#666; line-height:1.7;}
 main .wrap .qna_contents .q span em {font-weight:500; color:#0356A7; margin-right:14px;}
 main .wrap .qna_contents .q img {}
-main .wrap .qna_contents .a {/* display:none; */ display:block; background-color:#f6f6f6; text-align:left;}
+main .wrap .qna_contents .a {background-color:#f6f6f6; text-align:left;}
 /* 토글 클래스 on */
-.qna_contents .a.on {display:block;}
 main .wrap .qna_contents .a p {padding:32px 54px; letter-spacing:-0.2px; color:#666; line-height:1.7;}
 main .wrap .qna_contents .a p a {color:#0356A7; font-weight:500;}
