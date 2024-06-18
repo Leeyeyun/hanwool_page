@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품소개 | 한울 모랑모랑</title>
+    <!-- 웹글꼴 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS/JS 연결 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/product_info_2.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <script src="./script/product_info_2.js" defer></script>
+</head>
+<body>
+    <!--============================= header =============================-->
+    <?php include("header.php"); ?>
+    <!--============================= main =============================-->
+    <main>
+        <h1>제품소개</h1>
+        <div class="category">
+            <a href="#" class="active">제품소개</a>
+            <a href="#">연구개발</a>
+        </div>
+        <div class="wrap product_wrap">
+            <div class="step">
+                <!-- 오른쪽 arrow background로 추가 -->
+                <a href="#"><img src="./images/home_icon.svg" alt="홈"></a>
+                <a href="#">한울소개</a>
+                <a href="#">제품소개</a>
+            </div>
+            <ul class="product_category">
+                <li><a href="#" class="active">전체</a></li>
+                <li><a href="#">스틱</a></li>
+                <li><a href="#">말랭이</a></li>
+                <li><a href="#">RTE</a></li>
+                <li><a href="#">잼</a></li>
+                <li><a href="#">SAND STICK</a></li>
+                <li><a href="#">농산물</a></li>
+                <li><a href="#">기타</a></li>
+            </ul>
+            <!-- 검색란 -->
+            <form action="#" method="get" id="search_frm">
+                <fieldset class='search_wrap'>
+                    <legend class="skip">검색 양식</legend>
+                    <select name="search_option" id="search_option">
+                        <option value="menu_name">메뉴명</option>
+                    </select>
+                    <input type="text" name="search" id="search" required>
+                    <button type="button" id="search_btn"><img src="./images/search_icon.svg" alt="검색하기"></button>
+                </fieldset>
+            </form>
+            <ul class="product_contents">
+<!--            <li class="product_item">
+                    <a href="#">
+                        <p><img src="./images/product_item_002.jpg" alt=""></p>
+                        <div class="item_txt">
+                            <h2><em>스틱</em> 말랑말랑 감스틱 15g</h3>
+                            <h3>poket persimmon chew 15<span>g</span></h3>
+                            <p>감말랭이의 혁명! 스틱 형태로 절단해 건조시켜 꼬들꼬들 특이하고…</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <p><img src="./images/product_item_003.jpg" alt=""></p>
+                        <div class="item_txt">
+                            <h2><em>스틱</em> 촉촉 단호박 스틱 20g</h3>
+                            <h3>sweet pumpkin stick</h3>
+                            <p>고구마+단호박의 새로운 만남! 단호박이 더해져 더욱 풍미 깊은…</p>
+                        </div>
+                    </a>
+                </li> -->
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item">
+                    <a href="#" title="촉촉 고구마 스틱"><img src="./images/product_item_001.jpg" alt=""></a>
+                    <p><img src="./images/best.png" alt=""></p>
+                    <div class="item_txt">
+                        <a href="#">
+                            <h2><em>스틱</em> 촉촉 고구마 스틱</h3>
+                            <h3>chock chock sweet potato stick</h3>
+                        </a>
+                        <p>한울 시그니처 상품, 촉촉 고구마 스틱! #국내최초특허 #국산고…</p>
+                        <p><img src="./images/search_icon.svg" alt=""></p>
+                    </div>
+                </li>
+                <li class="product_item"><!-- 상품개수맞춤용 --></li>
+            </ul>
+            <div class="page_num">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#"><img src="./images/double_arrow_icon.svg" alt="다음 페이지"></a>
+            </div>
+        </div>
+    </main>
+    <!--============================= footer =============================-->
+    <?php include("footer.php"); ?>
+</body>
+</html>

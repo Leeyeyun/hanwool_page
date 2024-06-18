@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한울인증 | 한울 모랑모랑</title>
+    <!-- 웹글꼴 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS/JS 연결 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/certification_3.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <script src="./script/certification_3.js" defer></script>
+</head>
+<body>
+    <!--============================= header =============================-->
+    <?php include("header.php"); ?>
+    <!--============================= main =============================-->
+    <main>
+        <h1>한울인증</h1>
+        <div class="category">
+            <a href="#" class="active">특허인증</a>
+        </div>
+        <div class="wrap patent_wrap">
+            <div class="step">
+                <!-- 오른쪽 arrow background로 추가 -->
+                <a href="#"><img src="./images/home_icon.svg" alt="홈"></a>
+                <a href="#">한울인증</a>
+                <a href="#">특허인증</a>
+            </div>
+            <!-- 검색란 -->
+            <form action="#" method="get" id="search_frm">
+                <fieldset class="search_wrap">
+                    <legend class="skip">검색 양식</legend>
+                    <select name="search_option" id="search_option">
+                        <option value="title">제목</option>
+                        <option value="contents">내용</option>
+                        <option value="title_contents">제목+내용</option>
+                        <option value="id">아이디</option>
+                        <option value="uploader">글쓴이</option>
+                    </select>
+                    <input type="text" name="search" id="search" required>
+                    <button type="button" id="search_btn"><img src="./images/search_icon.svg" alt="검색하기"></button>
+                </fieldset>
+            </form>
+            <ul class="certi_contents">
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item">
+                    <a href="#">
+                        <p><img src="./images/certi_001.png" alt=""></p>
+                        <h2>촉촉고구마스틱 제조공법 특허</h2>
+                    </a>
+                </li>
+                <li class="certi_item"><!-- 개수맞춤용 --></li>
+                <li class="certi_item"><!-- 개수맞춤용 --></li>
+            </ul>
+        </div>
+    </main>
+    <!--============================= footer =============================-->
+    <?php include("footer.php"); ?>
+</body>
+</html>
