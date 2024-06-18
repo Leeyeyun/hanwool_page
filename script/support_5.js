@@ -6,6 +6,7 @@ console.log(qna_contents, q, a);
 for(let i of a){
     i.classList.add('a_off')
 }
+a[0].classList.remove('a_off')
 q[0].addEventListener('click',()=>{
     a[0].classList.toggle('a_off')
 })

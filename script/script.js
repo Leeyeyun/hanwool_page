@@ -64,12 +64,14 @@ for(let i of gnb_li){
 }
 
 // ---- 오른쪽 사이드바(데스크탑) 보이기 ---- //
+const body = document.querySelector('body');
 const lnb = document.querySelector('.lnb');
 const lnb_bg = lnb.querySelector('.lnb_bg');
 const all_nav = lnb.querySelector('.all_nav');
 const all_nav_a = all_nav.querySelectorAll('ul li a');
 const all_nav_btm = all_nav.querySelector('.btm');
 const rectangle = document.querySelector('.rectangle');
+console.log(body)
 //숨기는 초기값 설정
 all_nav.style.height = '0';
 all_nav.style.padding = '0';
@@ -87,6 +89,7 @@ rectangle.addEventListener('click',(e)=>{
     e.preventDefault(); //a href 막기
     boolean = !boolean; //boolean의 부정값을 대입하여 1-0-1-0 나오게 하기
     if(boolean == true){
+        body.classList.add('no-scroll')
         //transition 애니메이션 설정
         all_nav.style.transition = 'height 0.5s ease-in, padding 0.5s ease-in, overflow 0.5s ease-in'
         lnb_bg.style.transition = 'width 0.5s ease-in'
@@ -104,6 +107,7 @@ rectangle.addEventListener('click',(e)=>{
         rectangle.style.width = '32px';
         rectangle.style.height = '16px';
     }else{
+        body.classList.remove('no-scroll')
         //transition 애니메이션 설정
         all_nav.style.transition = 'height 0.5s 0.1s ease-in, padding 0.5s 0.5s, overflow 0.5s 0.1s ease-in'
         all_nav_btm.style.transition = 'opacity 0.5s'
@@ -140,11 +144,11 @@ all_nav_m.addEventListener('click',(e)=>{
     e.preventDefault();
     boolean = !boolean
     if(boolean == true){
-        console.log(boolean)
+        body.classList.add('no-scroll')
         all_nav_m_img.src = './images/close_icon.svg';
         all_nav_m.nextElementSibling.style.display = 'block';
     }else{
-        console.log(boolean)
+        body.classList.remove('no-scroll')
         all_nav_m_img.src = './images/m_nav_icon.svg';
         all_nav_m.nextElementSibling.style.display = 'none';
     }
