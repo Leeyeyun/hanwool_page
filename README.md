@@ -101,7 +101,7 @@ http://www.deli-hanwool.com/
 * HTML 구성을 고려하여 프로토타입을 제작하는 데 중점을 두면서 진행하였다.
 ## 24.06.11
 ### HTML & CSS 진행 (8시간 소요)
-* nav 제작할 때 : nav > .gnb > li + a + .sub(**li 안에 ul을 작성하여 sub 만들기**) > li > a
+* **nav 제작할 때** : nav > .gnb > li + a + .sub(**li 안에 ul을 작성하여 sub 만들기**) > li > a
 ```
 <nav>
     <ul class="gnb">
@@ -140,7 +140,7 @@ http://www.deli-hanwool.com/
     </ul>
 </nav>
 ```
-* 모바일 side nav : 모바일 nav와 데스크탑 nav의 구성은 동일하므로 **데스크탑 nav를 복제**한다. html은 복제할 공간만 만들고, 비워둔다!
+* **모바일 side nav** : 모바일 nav와 데스크탑 nav의 구성은 동일하므로 **데스크탑 nav를 복제**한다. html은 복제할 공간만 만들고, 비워둔다!
 ```
 <!-- mobile side nav -->
 <div class="m_nav">
@@ -150,7 +150,7 @@ http://www.deli-hanwool.com/
     <!-- 모바일 내비 제작 위치 -->
 </div>
 ```
-* swiper-slide 제작할 때 주의사항
+* **swiper-slide 제작할 때 주의사항**
 * swiper 플러그인에서 제공하는 코드 구성 변경하지 않기!
 * swiper > swiper-wrapper > swiper-slide 구성 유지하되, 추가 클래스 속성 작성 가능
 * swiper-wrapper & swiper-slide 에는 css 작성 X, swiper-slide 안에 작성한 태그 내에서 css 작업 가능
@@ -166,7 +166,9 @@ http://www.deli-hanwool.com/
     <div class="swiper-pagination"></div>
 </div>
 ```
-* 상품 그리드와 상품이미지(swiper) 구분하기
+* **상품 그리드와 상품이미지(swiper) 구분하기**
 * 상품은 움직이지만 그리드는 움직이지 않는다? -> 그리드와 상품이 분리되어 구성되어있는 것
 * 그리드는 .line_wrap으로 묶어 따로 구성하기
+## 24.06.19
+### HTML & CSS 진행 (8시간 소요)
 
