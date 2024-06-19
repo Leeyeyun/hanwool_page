@@ -6,6 +6,7 @@ console.log(qna_contents, q, a);
 for(let i of a){
     i.classList.add('a_off')
 }
+a[0].classList.remove('a_off')
 q[0].addEventListener('click',()=>{
     a[0].classList.toggle('a_off')
 })
@@ -22,30 +23,7 @@ q[4].addEventListener('click',()=>{
     a[4].classList.toggle('a_off')
 })
 
-/* for(let i of q){
-    i.addEventListener('click',()=>{
-        i.nextElementSibling.classList.toggle('on')
-    })
-} */
-/* q[0].addEventListener('click',()=>{
-    console.log(a[0])
-    a[0].classList.toggle('on')
-}) */
-
-
-/* for(let i of q){
-    i.addEventListener('click',()=>{
-        boolean = !boolean;
-        if(boolean == true){
-            console.log(1)
-            i.nextElementSibling.style.display = 'block';
-        }else{
-            console.log(0)
-            i.nextElementSibling.style.display = 'none';
-        }
-    })
-} */
-
+/* ---- header ---- */
 // ---- 상단 서브 메뉴 보이기 ---- //
 const nav = document.querySelector('nav')
 const sub = nav.querySelectorAll('.sub');
@@ -134,7 +112,6 @@ const nav_clone = nav.cloneNode(true) //nav복제 변수
 const m_nav = document.querySelector('.m_nav') //복제 대상 붙여넣기 용
 const all_nav_m = document.querySelector('.all_nav_m')
 const all_nav_m_img = all_nav_m.querySelector('img')
-console.log(all_nav_m_img.src)
 m_nav.appendChild(nav_clone)
 const sub_m = m_nav.querySelectorAll('.sub');
 const gnb_li_m = m_nav.querySelectorAll('.gnb > li');
@@ -154,18 +131,24 @@ all_nav_m.addEventListener('click',(e)=>{
         all_nav_m.nextElementSibling.style.display = 'none';
     }
 })
-
+for(let i of gnb_li_m){
+    i.children[0].href = '#'
+}
+/* for(let i of gnb_li_m.firstElementChild){
+    i.preventDefault();
+}
+ */
 //gnb_li_m 클릭시 해당 sub 메뉴 보이기&다른 sub 숨기기
 for(let b of gnb_li_m){
-    b.addEventListener('click',(e)=>{
-        e.preventDefault();
+    b.addEventListener('click',()=>{
+        /* e.preventDefault(); */
         for(let j of sub_m){
             j.style.transition = 'height 0.3s, overflow 0.3s'
             j.style.height = '0';
             j.style.overflow = 'hidden';
         }
-        console.log(b.children[1].children.length)
         b.children[1].style.height = `calc(26px * ${b.children[1].children.length} + 32px)`;
         b.children[1].style.overflow = 'visible';
     })
 }
+/* ---- e:header ---- */
